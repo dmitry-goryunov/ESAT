@@ -405,15 +405,6 @@
     "technique": "**ENGAA 2017 — paper techniques:**\n- Algebraic options: test simple values before expanding.\n- Proportionality: identify powers first, then scale.\n- Mechanics: draw all forces and use resultant force.\n- Graph questions: decide area or gradient before reaching for a formula.\n- Statement questions: evaluate each statement independently.\n\n**Topic (thermal) — always apply:**\n- Conduction rate ∝ area × ΔT / length; poorer conductor → steeper temperature drop.\n- Radiation: dull black surfaces emit and absorb more than shiny surfaces.\n- Vacuum stops conduction and convection, not radiation.\n- For ice-water: check whether available heat melts all ice before calculating final temperature."
   },
   {
-    "id": "engaa_2017_q25",
-    "source": "ENGAA 2017",
-    "module": "maths",
-    "topic": "algebra",
-    "image": "data/images/engaa_2017_q25.png",
-    "answer": "F",
-    "technique": "**ENGAA 2017 — paper techniques:**\n- Algebraic options: test simple values before expanding.\n- Proportionality: identify powers first, then scale.\n- Mechanics: draw all forces and use resultant force.\n- Graph questions: decide area or gradient before reaching for a formula.\n- Statement questions: evaluate each statement independently.\n\n**Topic (algebra) — always apply:**\n- Substitute answer options for awkward rearrangements.\n- Test simple values (x = 0, 1, −1) to eliminate symbolic options.\n- Factor before expanding.\n- For inequalities: solve normally, then check one test value.\n- For roots of quadratics: use sum/product or discriminant before the full formula."
-  },
-  {
     "id": "engaa_2017_q26",
     "source": "ENGAA 2017",
     "module": "physics",
@@ -639,15 +630,6 @@
     "technique": "**ENGAA 2018 — paper techniques:**\n- Energy audit for all machine and efficiency questions.\n- Circuit reduction before any calculation.\n- Graph questions: use gradients.\n- Polynomial/factor questions: answer substitution is often faster than full factoring.\n\n**Topic (waves) — always apply:**\n- Always start with v = fλ.\n- Frequency stays constant across a medium boundary.\n- One oscillation: particle travels 4 × amplitude.\n- Echoes and ultrasound: path is there and back — halve the total.\n- Doppler/redshift: moving away → lower frequency, longer wavelength."
   },
   {
-    "id": "engaa_2018_q23",
-    "source": "ENGAA 2018",
-    "module": "maths",
-    "topic": "geometry",
-    "image": "data/images/engaa_2018_q23.png",
-    "answer": "C",
-    "technique": "**ENGAA 2018 — paper techniques:**\n- Energy audit for all machine and efficiency questions.\n- Circuit reduction before any calculation.\n- Graph questions: use gradients.\n- Polynomial/factor questions: answer substitution is often faster than full factoring.\n\n**Topic (geometry) — always apply:**\n- Redraw diagrams cleanly.\n- Mark right angles, equal lengths, parallel lines and tangent points first.\n- Use area formulae before coordinate methods.\n- In bearings: draw North lines at each point and convert to triangle angles.\n- For similar triangles: write matching sides in the same order.\n- Radius to tangent is always perpendicular."
-  },
-  {
     "id": "engaa_2018_q24",
     "source": "ENGAA 2018",
     "module": "physics",
@@ -747,15 +729,6 @@
     "technique": "**ENGAA 2018 — paper techniques:**\n- Energy audit for all machine and efficiency questions.\n- Circuit reduction before any calculation.\n- Graph questions: use gradients.\n- Polynomial/factor questions: answer substitution is often faster than full factoring.\n\n**Topic (circuits) — always apply:**\n- Find equivalent resistance first.\n- Series: same current. Parallel: same potential difference.\n- Use P = IV, I²R or V²/R depending on which quantities are known.\n- For thermistor/variable-resistor questions: find fixed resistor from first condition, then reuse.\n- Trap: voltage is not fixed across one resistor in a changing series circuit."
   },
   {
-    "id": "engaa_2018_q9",
-    "source": "ENGAA 2018",
-    "module": "maths",
-    "topic": "geometry",
-    "image": "data/images/engaa_2018_q9.png",
-    "answer": "E",
-    "technique": "**ENGAA 2018 — paper techniques:**\n- Energy audit for all machine and efficiency questions.\n- Circuit reduction before any calculation.\n- Graph questions: use gradients.\n- Polynomial/factor questions: answer substitution is often faster than full factoring.\n\n**Topic (geometry) — always apply:**\n- Redraw diagrams cleanly.\n- Mark right angles, equal lengths, parallel lines and tangent points first.\n- Use area formulae before coordinate methods.\n- In bearings: draw North lines at each point and convert to triangle angles.\n- For similar triangles: write matching sides in the same order.\n- Radius to tangent is always perpendicular."
-  },
-  {
     "id": "engaa_2019_q1",
     "source": "ENGAA 2019",
     "module": "maths",
@@ -846,15 +819,6 @@
     "technique": "**ENGAA 2019 — paper techniques:**\n- Physics: units first.\n- Powers-of-ten bookkeeping for numerical Physics answers.\n- Quadratics: complete the square or use discriminant.\n- Probability or multi-category data: table method.\n- Any mechanics with contact, tension or friction: free-body diagram first.\n\n**Topic (circuits) — always apply:**\n- Find equivalent resistance first.\n- Series: same current. Parallel: same potential difference.\n- Use P = IV, I²R or V²/R depending on which quantities are known.\n- For thermistor/variable-resistor questions: find fixed resistor from first condition, then reuse.\n- Trap: voltage is not fixed across one resistor in a changing series circuit."
   },
   {
-    "id": "engaa_2019_q19",
-    "source": "ENGAA 2019",
-    "module": "maths",
-    "topic": "probability",
-    "image": "data/images/engaa_2019_q19.png",
-    "answer": "E",
-    "technique": "**ENGAA 2019 — paper techniques:**\n- Physics: units first.\n- Powers-of-ten bookkeeping for numerical Physics answers.\n- Quadratics: complete the square or use discriminant.\n- Probability or multi-category data: table method.\n- Any mechanics with contact, tension or friction: free-body diagram first.\n\n**Topic (probability) — always apply:**\n- Use complement for 'at least one'.\n- Use a two-way table for category or gender/activity questions.\n- For without-replacement: reduce numerator and denominator after each draw.\n- Count ordered outcomes when dice or repeated draws are involved.\n- For two-stage problems: condition on the first draw."
-  },
-  {
     "id": "engaa_2019_q2",
     "source": "ENGAA 2019",
     "module": "physics",
@@ -870,78 +834,6 @@
     "topic": "mechanics",
     "image": "data/images/engaa_2019_q20.png",
     "answer": "B",
-    "technique": "**ENGAA 2019 — paper techniques:**\n- Physics: units first.\n- Powers-of-ten bookkeeping for numerical Physics answers.\n- Quadratics: complete the square or use discriminant.\n- Probability or multi-category data: table method.\n- Any mechanics with contact, tension or friction: free-body diagram first.\n\n**Topic (mechanics) — always apply:**\n- Draw a free-body diagram.\n- Use resultant force, not just applied force.\n- For collisions: momentum first, then energy loss.\n- Impulse: force × time = change in momentum.\n- Use v² = u² + 2as when time is absent."
-  },
-  {
-    "id": "engaa_2019_q21",
-    "source": "ENGAA 2019",
-    "module": "maths",
-    "topic": "algebra",
-    "image": "data/images/engaa_2019_q21.png",
-    "answer": "C",
-    "technique": "**ENGAA 2019 — paper techniques:**\n- Physics: units first.\n- Powers-of-ten bookkeeping for numerical Physics answers.\n- Quadratics: complete the square or use discriminant.\n- Probability or multi-category data: table method.\n- Any mechanics with contact, tension or friction: free-body diagram first.\n\n**Topic (algebra) — always apply:**\n- Substitute answer options for awkward rearrangements.\n- Test simple values (x = 0, 1, −1) to eliminate symbolic options.\n- Factor before expanding.\n- For inequalities: solve normally, then check one test value.\n- For roots of quadratics: use sum/product or discriminant before the full formula."
-  },
-  {
-    "id": "engaa_2019_q22",
-    "source": "ENGAA 2019",
-    "module": "physics",
-    "topic": "waves",
-    "image": "data/images/engaa_2019_q22.png",
-    "answer": "C",
-    "technique": "**ENGAA 2019 — paper techniques:**\n- Physics: units first.\n- Powers-of-ten bookkeeping for numerical Physics answers.\n- Quadratics: complete the square or use discriminant.\n- Probability or multi-category data: table method.\n- Any mechanics with contact, tension or friction: free-body diagram first.\n\n**Topic (waves) — always apply:**\n- Always start with v = fλ.\n- Frequency stays constant across a medium boundary.\n- One oscillation: particle travels 4 × amplitude.\n- Echoes and ultrasound: path is there and back — halve the total.\n- Doppler/redshift: moving away → lower frequency, longer wavelength."
-  },
-  {
-    "id": "engaa_2019_q23",
-    "source": "ENGAA 2019",
-    "module": "maths",
-    "topic": "geometry",
-    "image": "data/images/engaa_2019_q23.png",
-    "answer": "B",
-    "technique": "**ENGAA 2019 — paper techniques:**\n- Physics: units first.\n- Powers-of-ten bookkeeping for numerical Physics answers.\n- Quadratics: complete the square or use discriminant.\n- Probability or multi-category data: table method.\n- Any mechanics with contact, tension or friction: free-body diagram first.\n\n**Topic (geometry) — always apply:**\n- Redraw diagrams cleanly.\n- Mark right angles, equal lengths, parallel lines and tangent points first.\n- Use area formulae before coordinate methods.\n- In bearings: draw North lines at each point and convert to triangle angles.\n- For similar triangles: write matching sides in the same order.\n- Radius to tangent is always perpendicular."
-  },
-  {
-    "id": "engaa_2019_q24",
-    "source": "ENGAA 2019",
-    "module": "physics",
-    "topic": "thermal",
-    "image": "data/images/engaa_2019_q24.png",
-    "answer": "E",
-    "technique": "**ENGAA 2019 — paper techniques:**\n- Physics: units first.\n- Powers-of-ten bookkeeping for numerical Physics answers.\n- Quadratics: complete the square or use discriminant.\n- Probability or multi-category data: table method.\n- Any mechanics with contact, tension or friction: free-body diagram first.\n\n**Topic (thermal) — always apply:**\n- Conduction rate ∝ area × ΔT / length; poorer conductor → steeper temperature drop.\n- Radiation: dull black surfaces emit and absorb more than shiny surfaces.\n- Vacuum stops conduction and convection, not radiation.\n- For ice-water: check whether available heat melts all ice before calculating final temperature."
-  },
-  {
-    "id": "engaa_2019_q25",
-    "source": "ENGAA 2019",
-    "module": "maths",
-    "topic": "algebra",
-    "image": "data/images/engaa_2019_q25.png",
-    "answer": "B",
-    "technique": "**ENGAA 2019 — paper techniques:**\n- Physics: units first.\n- Powers-of-ten bookkeeping for numerical Physics answers.\n- Quadratics: complete the square or use discriminant.\n- Probability or multi-category data: table method.\n- Any mechanics with contact, tension or friction: free-body diagram first.\n\n**Topic (algebra) — always apply:**\n- Substitute answer options for awkward rearrangements.\n- Test simple values (x = 0, 1, −1) to eliminate symbolic options.\n- Factor before expanding.\n- For inequalities: solve normally, then check one test value.\n- For roots of quadratics: use sum/product or discriminant before the full formula."
-  },
-  {
-    "id": "engaa_2019_q26",
-    "source": "ENGAA 2019",
-    "module": "physics",
-    "topic": "energy",
-    "image": "data/images/engaa_2019_q26.png",
-    "answer": "C",
-    "technique": "**ENGAA 2019 — paper techniques:**\n- Physics: units first.\n- Powers-of-ten bookkeeping for numerical Physics answers.\n- Quadratics: complete the square or use discriminant.\n- Probability or multi-category data: table method.\n- Any mechanics with contact, tension or friction: free-body diagram first.\n\n**Topic (energy) — always apply:**\n- Write an energy audit: input = useful + wasted.\n- Efficiency = useful output / input.\n- Power = energy / time.\n- Gravitational PE = mgh; use vertical height, not distance along slope.\n- For heating: energy = mcΔT, plus latent heat if there is a phase change."
-  },
-  {
-    "id": "engaa_2019_q27",
-    "source": "ENGAA 2019",
-    "module": "maths",
-    "topic": "algebra",
-    "image": "data/images/engaa_2019_q27.png",
-    "answer": "D",
-    "technique": "**ENGAA 2019 — paper techniques:**\n- Physics: units first.\n- Powers-of-ten bookkeeping for numerical Physics answers.\n- Quadratics: complete the square or use discriminant.\n- Probability or multi-category data: table method.\n- Any mechanics with contact, tension or friction: free-body diagram first.\n\n**Topic (algebra) — always apply:**\n- Substitute answer options for awkward rearrangements.\n- Test simple values (x = 0, 1, −1) to eliminate symbolic options.\n- Factor before expanding.\n- For inequalities: solve normally, then check one test value.\n- For roots of quadratics: use sum/product or discriminant before the full formula."
-  },
-  {
-    "id": "engaa_2019_q28",
-    "source": "ENGAA 2019",
-    "module": "physics",
-    "topic": "mechanics",
-    "image": "data/images/engaa_2019_q28.png",
-    "answer": "C",
     "technique": "**ENGAA 2019 — paper techniques:**\n- Physics: units first.\n- Powers-of-ten bookkeeping for numerical Physics answers.\n- Quadratics: complete the square or use discriminant.\n- Probability or multi-category data: table method.\n- Any mechanics with contact, tension or friction: free-body diagram first.\n\n**Topic (mechanics) — always apply:**\n- Draw a free-body diagram.\n- Use resultant force, not just applied force.\n- For collisions: momentum first, then energy loss.\n- Impulse: force × time = change in momentum.\n- Use v² = u² + 2as when time is absent."
   },
   {
@@ -2115,15 +2007,6 @@
     "technique": "**NSAA 2017 — paper techniques:**\n- Velocity-time graphs: isolate only the decelerating sections.\n- EM spectrum: use v = fλ.\n- Nuclear: balance A and Z before reading options.\n- Atom/nucleus density ratio: density ∝ 1/radius³ if mass is fixed.\n- Use known resistor power to infer branch current/voltage.\n- Maths: exterior angle = 360/n for regular polygons; for clocks use relative angular speed; volume scale = length scale cubed.\n\n**Topic (algebra) — always apply:**\n- Substitute answer options for awkward rearrangements.\n- Test simple values (x = 0, 1, −1) to eliminate symbolic options.\n- Factor before expanding.\n- For inequalities: solve normally, then check one test value.\n- For roots of quadratics: use sum/product or discriminant before the full formula."
   },
   {
-    "id": "nsaa_2017_q16",
-    "source": "NSAA 2017",
-    "module": "maths",
-    "topic": "algebra",
-    "image": "data/images/nsaa_2017_q16.png",
-    "answer": "F",
-    "technique": "**NSAA 2017 — paper techniques:**\n- Velocity-time graphs: isolate only the decelerating sections.\n- EM spectrum: use v = fλ.\n- Nuclear: balance A and Z before reading options.\n- Atom/nucleus density ratio: density ∝ 1/radius³ if mass is fixed.\n- Use known resistor power to infer branch current/voltage.\n- Maths: exterior angle = 360/n for regular polygons; for clocks use relative angular speed; volume scale = length scale cubed.\n\n**Topic (algebra) — always apply:**\n- Substitute answer options for awkward rearrangements.\n- Test simple values (x = 0, 1, −1) to eliminate symbolic options.\n- Factor before expanding.\n- For inequalities: solve normally, then check one test value.\n- For roots of quadratics: use sum/product or discriminant before the full formula."
-  },
-  {
     "id": "nsaa_2017_q17",
     "source": "NSAA 2017",
     "module": "maths",
@@ -2403,15 +2286,6 @@
     "technique": "**NSAA 2018 — paper techniques:**\n- Series circuit removal: infer supply voltage from original current × resistance.\n- Speed-time graph: average speed = total area / total time.\n- Half-life: identify background count before halving.\n- Terminal speed: set weight = drag (net force = 0).\n- V-I graph with series resistor: supply voltage is the constraint line.\n- Maths: two-group totals → table first; similar volumes → cube the scale factor; combined mean → use total sum, not average of averages.\n\n**Topic (algebra) — always apply:**\n- Substitute answer options for awkward rearrangements.\n- Test simple values (x = 0, 1, −1) to eliminate symbolic options.\n- Factor before expanding.\n- For inequalities: solve normally, then check one test value.\n- For roots of quadratics: use sum/product or discriminant before the full formula."
   },
   {
-    "id": "nsaa_2018_q12",
-    "source": "NSAA 2018",
-    "module": "maths",
-    "topic": "geometry",
-    "image": "data/images/nsaa_2018_q12.png",
-    "answer": "F",
-    "technique": "**NSAA 2018 — paper techniques:**\n- Series circuit removal: infer supply voltage from original current × resistance.\n- Speed-time graph: average speed = total area / total time.\n- Half-life: identify background count before halving.\n- Terminal speed: set weight = drag (net force = 0).\n- V-I graph with series resistor: supply voltage is the constraint line.\n- Maths: two-group totals → table first; similar volumes → cube the scale factor; combined mean → use total sum, not average of averages.\n\n**Topic (geometry) — always apply:**\n- Redraw diagrams cleanly.\n- Mark right angles, equal lengths, parallel lines and tangent points first.\n- Use area formulae before coordinate methods.\n- In bearings: draw North lines at each point and convert to triangle angles.\n- For similar triangles: write matching sides in the same order.\n- Radius to tangent is always perpendicular."
-  },
-  {
     "id": "nsaa_2018_q13",
     "source": "NSAA 2018",
     "module": "maths",
@@ -2435,15 +2309,6 @@
     "module": "maths",
     "topic": "algebra",
     "image": "data/images/nsaa_2018_q15.png",
-    "answer": "C",
-    "technique": "**NSAA 2018 — paper techniques:**\n- Series circuit removal: infer supply voltage from original current × resistance.\n- Speed-time graph: average speed = total area / total time.\n- Half-life: identify background count before halving.\n- Terminal speed: set weight = drag (net force = 0).\n- V-I graph with series resistor: supply voltage is the constraint line.\n- Maths: two-group totals → table first; similar volumes → cube the scale factor; combined mean → use total sum, not average of averages.\n\n**Topic (algebra) — always apply:**\n- Substitute answer options for awkward rearrangements.\n- Test simple values (x = 0, 1, −1) to eliminate symbolic options.\n- Factor before expanding.\n- For inequalities: solve normally, then check one test value.\n- For roots of quadratics: use sum/product or discriminant before the full formula."
-  },
-  {
-    "id": "nsaa_2018_q16",
-    "source": "NSAA 2018",
-    "module": "maths",
-    "topic": "algebra",
-    "image": "data/images/nsaa_2018_q16.png",
     "answer": "C",
     "technique": "**NSAA 2018 — paper techniques:**\n- Series circuit removal: infer supply voltage from original current × resistance.\n- Speed-time graph: average speed = total area / total time.\n- Half-life: identify background count before halving.\n- Terminal speed: set weight = drag (net force = 0).\n- V-I graph with series resistor: supply voltage is the constraint line.\n- Maths: two-group totals → table first; similar volumes → cube the scale factor; combined mean → use total sum, not average of averages.\n\n**Topic (algebra) — always apply:**\n- Substitute answer options for awkward rearrangements.\n- Test simple values (x = 0, 1, −1) to eliminate symbolic options.\n- Factor before expanding.\n- For inequalities: solve normally, then check one test value.\n- For roots of quadratics: use sum/product or discriminant before the full formula."
   },
@@ -2664,15 +2529,6 @@
     "technique": "**NSAA 2018 — paper techniques:**\n- Series circuit removal: infer supply voltage from original current × resistance.\n- Speed-time graph: average speed = total area / total time.\n- Half-life: identify background count before halving.\n- Terminal speed: set weight = drag (net force = 0).\n- V-I graph with series resistor: supply voltage is the constraint line.\n- Maths: two-group totals → table first; similar volumes → cube the scale factor; combined mean → use total sum, not average of averages.\n\n**Topic (algebra) — always apply:**\n- Substitute answer options for awkward rearrangements.\n- Test simple values (x = 0, 1, −1) to eliminate symbolic options.\n- Factor before expanding.\n- For inequalities: solve normally, then check one test value.\n- For roots of quadratics: use sum/product or discriminant before the full formula."
   },
   {
-    "id": "nsaa_2018_q6",
-    "source": "NSAA 2018",
-    "module": "maths",
-    "topic": "geometry",
-    "image": "data/images/nsaa_2018_q6.png",
-    "answer": "E",
-    "technique": "**NSAA 2018 — paper techniques:**\n- Series circuit removal: infer supply voltage from original current × resistance.\n- Speed-time graph: average speed = total area / total time.\n- Half-life: identify background count before halving.\n- Terminal speed: set weight = drag (net force = 0).\n- V-I graph with series resistor: supply voltage is the constraint line.\n- Maths: two-group totals → table first; similar volumes → cube the scale factor; combined mean → use total sum, not average of averages.\n\n**Topic (geometry) — always apply:**\n- Redraw diagrams cleanly.\n- Mark right angles, equal lengths, parallel lines and tangent points first.\n- Use area formulae before coordinate methods.\n- In bearings: draw North lines at each point and convert to triangle angles.\n- For similar triangles: write matching sides in the same order.\n- Radius to tangent is always perpendicular."
-  },
-  {
     "id": "nsaa_2018_q7",
     "source": "NSAA 2018",
     "module": "maths",
@@ -2779,15 +2635,6 @@
     "image": "data/images/nsaa_2019_q17.png",
     "answer": "C",
     "technique": "**NSAA 2019 — paper techniques:**\n- Wave amplitude: one oscillation means particle travels 4 × amplitude.\n- Diode + resistor: read diode voltage from V-I graph at the given current.\n- Gas compression at constant temperature: use pressure × volume = constant.\n- Motor effect balance: compare readings before and after to find the force difference.\n- Collisions: compute initial momentum and kinetic energy separately.\n- Maths: difference of squares for surds; sphere volume scaling = (new/old radius)³; exponent equations → convert to one base; transformations → move one vertex at a time.\n\n**Topic (ratio) — always apply:**\n- Use multipliers, not additive language.\n- Reverse percentages by dividing by the multiplier.\n- For combined ratios: make the shared quantity match.\n- For similar shapes: length scale k, area scale k², volume scale k³.\n- Average speed = total distance / total time, not average of speeds."
-  },
-  {
-    "id": "nsaa_2019_q18",
-    "source": "NSAA 2019",
-    "module": "maths",
-    "topic": "algebra",
-    "image": "data/images/nsaa_2019_q18.png",
-    "answer": "E",
-    "technique": "**NSAA 2019 — paper techniques:**\n- Wave amplitude: one oscillation means particle travels 4 × amplitude.\n- Diode + resistor: read diode voltage from V-I graph at the given current.\n- Gas compression at constant temperature: use pressure × volume = constant.\n- Motor effect balance: compare readings before and after to find the force difference.\n- Collisions: compute initial momentum and kinetic energy separately.\n- Maths: difference of squares for surds; sphere volume scaling = (new/old radius)³; exponent equations → convert to one base; transformations → move one vertex at a time.\n\n**Topic (algebra) — always apply:**\n- Substitute answer options for awkward rearrangements.\n- Test simple values (x = 0, 1, −1) to eliminate symbolic options.\n- Factor before expanding.\n- For inequalities: solve normally, then check one test value.\n- For roots of quadratics: use sum/product or discriminant before the full formula."
   },
   {
     "id": "nsaa_2019_q19",
@@ -3753,15 +3600,6 @@
     "technique": "**NSAA 2022 — paper techniques:**\n- Magnetic force: find current from charge/time first.\n- Impulse: average force = change in momentum / contact time.\n- Ultrasound: difference in return times gives distance difference — halve the path.\n- V-I graph circuits: read values at the actual operating current/voltage intersection.\n- Spring energy: E ∝ x²; if E gives height, height ∝ E/m.\n- Maths: median/mean with repeated values → write ordered list; average speed → total distance / total time; polygon interior angle = 180 − 360/n.\n\n**Topic (algebra) — always apply:**\n- Substitute answer options for awkward rearrangements.\n- Test simple values (x = 0, 1, −1) to eliminate symbolic options.\n- Factor before expanding.\n- For inequalities: solve normally, then check one test value.\n- For roots of quadratics: use sum/product or discriminant before the full formula."
   },
   {
-    "id": "nsaa_2022_q10",
-    "source": "NSAA 2022",
-    "module": "maths",
-    "topic": "algebra",
-    "image": "data/images/nsaa_2022_q10.png",
-    "answer": "B",
-    "technique": "**NSAA 2022 — paper techniques:**\n- Magnetic force: find current from charge/time first.\n- Impulse: average force = change in momentum / contact time.\n- Ultrasound: difference in return times gives distance difference — halve the path.\n- V-I graph circuits: read values at the actual operating current/voltage intersection.\n- Spring energy: E ∝ x²; if E gives height, height ∝ E/m.\n- Maths: median/mean with repeated values → write ordered list; average speed → total distance / total time; polygon interior angle = 180 − 360/n.\n\n**Topic (algebra) — always apply:**\n- Substitute answer options for awkward rearrangements.\n- Test simple values (x = 0, 1, −1) to eliminate symbolic options.\n- Factor before expanding.\n- For inequalities: solve normally, then check one test value.\n- For roots of quadratics: use sum/product or discriminant before the full formula."
-  },
-  {
     "id": "nsaa_2022_q11",
     "source": "NSAA 2022",
     "module": "maths",
@@ -4149,15 +3987,6 @@
     "technique": "**NSAA 2023 — paper techniques:**\n- Stopping distance: work-energy (F × d = ΔKE) beats SUVAT.\n- Layered conduction: steeper temperature drop occurs in the poorer conductor.\n- Ice-water equilibrium: check whether available heat is enough to melt all ice before calculating final temperature.\n- Phase delay in glass: compare number of wavelengths fitting through the same thickness.\n- Floating block: extra submersion → extra upthrust from extra displaced volume.\n- Maths: coordinate area → shoelace or split into triangles; similar solids with area factor 2 → length factor √2, volume factor 2√2; trig optimisation → set u = sin x.\n\n**Topic (geometry) — always apply:**\n- Redraw diagrams cleanly.\n- Mark right angles, equal lengths, parallel lines and tangent points first.\n- Use area formulae before coordinate methods.\n- In bearings: draw North lines at each point and convert to triangle angles.\n- For similar triangles: write matching sides in the same order.\n- Radius to tangent is always perpendicular."
   },
   {
-    "id": "nsaa_2023_q14",
-    "source": "NSAA 2023",
-    "module": "maths",
-    "topic": "probability",
-    "image": "data/images/nsaa_2023_q14.png",
-    "answer": "D",
-    "technique": "**NSAA 2023 — paper techniques:**\n- Stopping distance: work-energy (F × d = ΔKE) beats SUVAT.\n- Layered conduction: steeper temperature drop occurs in the poorer conductor.\n- Ice-water equilibrium: check whether available heat is enough to melt all ice before calculating final temperature.\n- Phase delay in glass: compare number of wavelengths fitting through the same thickness.\n- Floating block: extra submersion → extra upthrust from extra displaced volume.\n- Maths: coordinate area → shoelace or split into triangles; similar solids with area factor 2 → length factor √2, volume factor 2√2; trig optimisation → set u = sin x.\n\n**Topic (probability) — always apply:**\n- Use complement for 'at least one'.\n- Use a two-way table for category or gender/activity questions.\n- For without-replacement: reduce numerator and denominator after each draw.\n- Count ordered outcomes when dice or repeated draws are involved.\n- For two-stage problems: condition on the first draw."
-  },
-  {
     "id": "nsaa_2023_q15",
     "source": "NSAA 2023",
     "module": "maths",
@@ -4336,15 +4165,6 @@
     "image": "data/images/nsaa_2023_q32.png",
     "answer": "A",
     "technique": "**NSAA 2023 — paper techniques:**\n- Stopping distance: work-energy (F × d = ΔKE) beats SUVAT.\n- Layered conduction: steeper temperature drop occurs in the poorer conductor.\n- Ice-water equilibrium: check whether available heat is enough to melt all ice before calculating final temperature.\n- Phase delay in glass: compare number of wavelengths fitting through the same thickness.\n- Floating block: extra submersion → extra upthrust from extra displaced volume.\n- Maths: coordinate area → shoelace or split into triangles; similar solids with area factor 2 → length factor √2, volume factor 2√2; trig optimisation → set u = sin x.\n\n**Topic (circuits) — always apply:**\n- Find equivalent resistance first.\n- Series: same current. Parallel: same potential difference.\n- Use P = IV, I²R or V²/R depending on which quantities are known.\n- For thermistor/variable-resistor questions: find fixed resistor from first condition, then reuse.\n- Trap: voltage is not fixed across one resistor in a changing series circuit."
-  },
-  {
-    "id": "nsaa_2023_q33",
-    "source": "NSAA 2023",
-    "module": "physics",
-    "topic": "waves",
-    "image": "data/images/nsaa_2023_q33.png",
-    "answer": "B",
-    "technique": "**NSAA 2023 — paper techniques:**\n- Stopping distance: work-energy (F × d = ΔKE) beats SUVAT.\n- Layered conduction: steeper temperature drop occurs in the poorer conductor.\n- Ice-water equilibrium: check whether available heat is enough to melt all ice before calculating final temperature.\n- Phase delay in glass: compare number of wavelengths fitting through the same thickness.\n- Floating block: extra submersion → extra upthrust from extra displaced volume.\n- Maths: coordinate area → shoelace or split into triangles; similar solids with area factor 2 → length factor √2, volume factor 2√2; trig optimisation → set u = sin x.\n\n**Topic (waves) — always apply:**\n- Always start with v = fλ.\n- Frequency stays constant across a medium boundary.\n- One oscillation: particle travels 4 × amplitude.\n- Echoes and ultrasound: path is there and back — halve the total.\n- Doppler/redshift: moving away → lower frequency, longer wavelength."
   },
   {
     "id": "nsaa_2023_q34",

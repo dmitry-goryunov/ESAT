@@ -7,20 +7,26 @@ Run from the project root:
 Output: data/images/<id>.png  (one PNG per question entry in MANIFEST)
 Then run build_questions.py to generate questions.json.
 
-Page formulas (verified from existing extractions):
-  NSAA all years:       page_idx = qnum + 1
-  ENGAA all years:      page_idx = qnum + 1  (Part A only — Part B offset unverified)
-  TMUA all years:       page_idx = qnum - 1  (no cover page)
+Page finding (NSAA / ENGAA):
+  Each PDF is scanned page-by-page. The current section (PART A, PART B, ...)
+  is tracked via page headers and carried forward to pages that have no header.
+  Questions are only collected from allowed parts.
+
+  NSAA: include PART A (Mathematics) and PART B (Physics) — exclude Chemistry, Biology, etc.
+  ENGAA: include PART A (Mathematics and Physics) only — exclude PART B (Advanced).
+
+TMUA all years: page_idx = qnum - 1  (no cover page, formula verified).
 
 Sources included:
-  NSAA 2016-2023  — all questions (Q1-36 for 2016-2019, Q1-40 for 2020-2023)
-  ENGAA 2016-2023 — Part A only (Q1-28 for 2016-2019, Q1-20 for 2020-2023)
+  NSAA 2016-2023  — Maths (Part A) + Physics (Part B) only
+  ENGAA 2016-2023 — Section 1 Part A only (accessible Maths + Physics)
   TMUA 2016-2023 + specimen — all 20 questions per paper
-
-PAT excluded: wrong format for ESAT-style timed MCQ practice.
 """
 
+import re
 from pathlib import Path
+
+import pdfplumber
 import pypdfium2 as pdfium
 
 ROOT = Path(__file__).parent.parent
@@ -29,31 +35,99 @@ IMAGES_DIR.mkdir(parents=True, exist_ok=True)
 
 SCALE = 2.5  # ~180 DPI
 
+_PART_NAMES = ("PART A", "PART B", "PART C", "PART D", "PART E")
+# Matches a 1-2 digit question number at the start of a line, followed by a capital letter.
+_Q_NUM = re.compile(r"(?:^|\n)(\d{1,2}) [A-Z]")
+
+
+def scan_question_pages(
+    pdf_path: Path,
+    include_parts: tuple[str, ...] | None,
+    max_q: int,
+) -> dict[int, int]:
+    """
+    Scan a PDF and return {question_number: page_idx}.
+
+    Tracks the current named part (PART A, PART B, ...) as a running header
+    across pages that don't explicitly name their part. Questions are only
+    collected when the current part is in include_parts (or include_parts is
+    None, which accepts all pages).
+    """
+    q_to_page: dict[int, int] = {}
+    current_part: str | None = None
+
+    try:
+        with pdfplumber.open(str(pdf_path)) as pdf:
+            for idx, page in enumerate(pdf.pages):
+                text = page.extract_text() or ""
+
+                # Update tracked part when this page has an explicit part header.
+                for pname in _PART_NAMES:
+                    if pname in text:
+                        current_part = pname
+                        break
+
+                # Skip pages outside the allowed parts.
+                if include_parts is not None and current_part not in include_parts:
+                    continue
+
+                # Collect question numbers from this page.
+                for m in _Q_NUM.finditer(text):
+                    qnum = int(m.group(1))
+                    if 1 <= qnum <= max_q and qnum not in q_to_page:
+                        q_to_page[qnum] = idx
+    except Exception as e:
+        print(f"  WARNING: could not scan {pdf_path.name}: {e}")
+
+    return q_to_page
+
 
 def generate_manifest() -> list[tuple[str, str, int]]:
     entries = []
 
-    # ── NSAA 2016-2023: all questions, page_idx = qnum + 1 ──────────────────
+    # ── NSAA 2016-2023: Part A (Maths) + Part B (Physics) only ─────────────
+    # Chemistry (Part C), Biology (Part D), and Advanced (Part E) are excluded.
     for year in range(2016, 2024):
         max_q = 36 if year <= 2019 else 40
-        pdf = f"papers/nsaa/NSAA_{year}_S1_QuestionPaper.pdf"
+        rel_pdf = f"papers/nsaa/NSAA_{year}_S1_QuestionPaper.pdf"
+        pdf_path = ROOT / rel_pdf
+        if not pdf_path.exists():
+            print(f"  SKIP (PDF not found): {pdf_path.name}")
+            continue
+        q_pages = scan_question_pages(
+            pdf_path, include_parts=("PART A", "PART B"), max_q=max_q
+        )
+        print(f"  NSAA {year}: {len(q_pages)}/{max_q} pages found")
         for q in range(1, max_q + 1):
-            entries.append((f"nsaa_{year}_q{q}", pdf, q + 1))
+            if q in q_pages:
+                entries.append((f"nsaa_{year}_q{q}", rel_pdf, q_pages[q]))
+            else:
+                print(f"    WARNING: nsaa_{year}_q{q} not found in scan")
 
-    # ── ENGAA 2016-2023: Part A only, page_idx = qnum + 1 ───────────────────
-    # 2016-2019: Part A = Q1-28 (54 questions total, Part B offset unverified)
-    # 2020-2023: Part A = Q1-20 (40 questions total, Part B offset unverified)
+    # ── ENGAA 2016-2023: Section 1 Part A only ──────────────────────────────
+    # Part A is the accessible Maths+Physics section (no running header on
+    # question pages; part is carried forward from the section header page).
+    # Part B is "Advanced Mathematics and Advanced Physics" — excluded.
     for year in range(2016, 2024):
-        part_a_limit = 28 if year <= 2019 else 20
-        pdf = f"papers/engaa/ENGAA_{year}_S1_QuestionPaper.pdf"
-        for q in range(1, part_a_limit + 1):
-            entries.append((f"engaa_{year}_q{q}", pdf, q + 1))
+        # Generous cap; scan will only find questions actually in Part A.
+        max_q = 35
+        rel_pdf = f"papers/engaa/ENGAA_{year}_S1_QuestionPaper.pdf"
+        pdf_path = ROOT / rel_pdf
+        if not pdf_path.exists():
+            print(f"  SKIP (PDF not found): {pdf_path.name}")
+            continue
+        q_pages = scan_question_pages(
+            pdf_path, include_parts=("PART A",), max_q=max_q
+        )
+        print(f"  ENGAA {year}: {len(q_pages)}/{max_q} pages found")
+        for q in sorted(q_pages):
+            entries.append((f"engaa_{year}_q{q}", rel_pdf, q_pages[q]))
 
     # ── TMUA 2016-2023: all 20 questions, page_idx = qnum - 1 ───────────────
     for year in range(2016, 2024):
-        pdf = f"papers/tmua/TMUA-{year}-paper-1.pdf"
+        rel_pdf = f"papers/tmua/TMUA-{year}-paper-1.pdf"
         for q in range(1, 21):
-            entries.append((f"tmua_{year}_q{q}", pdf, q - 1))
+            entries.append((f"tmua_{year}_q{q}", rel_pdf, q - 1))
 
     # ── TMUA specimen ────────────────────────────────────────────────────────
     for q in range(1, 21):
@@ -85,20 +159,23 @@ def extract_page(pdf_path: Path, page_idx: int, out_path: Path) -> bool:
         return False
 
 
-def remove_pat_images():
+def remove_stale_images():
+    """Delete existing NSAA, ENGAA, and PAT images so they are re-extracted correctly."""
     removed = 0
-    for f in IMAGES_DIR.glob("pat_*.png"):
-        f.unlink()
-        removed += 1
+    for pattern in ("nsaa_*.png", "engaa_*.png", "pat_*.png"):
+        for f in IMAGES_DIR.glob(pattern):
+            f.unlink()
+            removed += 1
     if removed:
-        print(f"Removed {removed} PAT images.")
+        print(f"Removed {removed} stale NSAA/ENGAA/PAT images (will re-extract).\n")
 
 
 def main():
-    remove_pat_images()
+    remove_stale_images()
 
+    print("Scanning PDFs for question page positions...\n")
     manifest = generate_manifest()
-    print(f"Manifest: {len(manifest)} question entries\n")
+    print(f"\nManifest: {len(manifest)} question entries\n")
 
     ok = 0
     skipped = 0
