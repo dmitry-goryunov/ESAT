@@ -334,7 +334,7 @@ with tab3:
             return "background-color: #3a1a1a; color: white"
 
     st.dataframe(
-        df_value.style.applymap(colour_value, subset=["Training Value"]),
+        df_value.style.map(colour_value, subset=["Training Value"]),
         use_container_width=True,
         hide_index=True,
     )
