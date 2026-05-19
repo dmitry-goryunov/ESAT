@@ -1,6 +1,7 @@
 papers/
 scores.csv
 data/progress.json
+data/attempts.jsonl
 __pycache__/
 *.pyc
 *.pyo

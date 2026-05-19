@@ -10,12 +10,23 @@ import streamlit as st
 import streamlit.components.v1 as components
 from streamlit_autorefresh import st_autorefresh
 
+from scripts.quiz_logic import (
+    answer_letters_for,
+    build_reattempt_queue,
+    infer_esat_area,
+    is_mastered,
+    is_review_attempt,
+    next_due_date,
+    summarize_attempt_rows,
+    topic_dashboard_rows,
+)
+
 st.set_page_config(page_title="ESAT Prep Dashboard", layout="wide")
 
 st.title("ESAT Preparation Dashboard")
 st.caption("Maths 1 · Maths 2 · Physics — Oxbridge / Imperial target")
 
-tab4, tab1, tab2, tab3 = st.tabs(["🎯 Quiz", "📅 12-Week Schedule", "📚 Papers Timetable", "📊 Paper Comparison"])
+tab4, tab5, tab1, tab2, tab3 = st.tabs(["🎯 Quiz", "📈 Weak Dashboard", "📅 12-Week Schedule", "📚 Papers Timetable", "📊 Paper Comparison"])
 
 # ─────────────────────────────────────────────
 # TAB 1 — 12-WEEK SCHEDULE
@@ -381,15 +392,6 @@ def count_question_records() -> int:
         return len(json.load(f))
 
 
-def infer_esat_area(q: dict) -> str:
-    if q.get("module") == "physics":
-        return "Physics"
-    maths2_topics = {"functions", "graphs", "sequences", "trig"}
-    if q.get("topic") in maths2_topics:
-        return "Maths 2"
-    return "Maths 1"
-
-
 def load_progress() -> dict:
     if PROGRESS_FILE.exists():
         with PROGRESS_FILE.open(encoding="utf-8") as f:
@@ -522,11 +524,17 @@ def init_quiz(
 ) -> bool:
     pool = apply_quiz_filters(questions, area_filter, source_filter, year_filter, topic_filter, include_done)
     if quiz_mode == "Weak-topic repair" and topic_filter == "All":
-        weak_topics = weak_topics_from_attempts()
-        if weak_topics:
-            weak_pool = [q for q in pool if q["topic"] in set(weak_topics[:3])]
-            if len(weak_pool) >= min(n_questions, len(pool)):
-                pool = weak_pool
+        due_ids = {row["id"] for row in build_reattempt_queue(load_attempts())}
+        if due_ids:
+            due_pool = [q for q in pool if q["id"] in due_ids]
+            if len(due_pool) >= min(n_questions, len(pool)):
+                pool = due_pool
+        else:
+            weak_topics = weak_topics_from_attempts()
+            if weak_topics:
+                weak_pool = [q for q in pool if q["topic"] in set(weak_topics[:3])]
+                if len(weak_pool) >= min(n_questions, len(pool)):
+                    pool = weak_pool
     if len(pool) < n_questions:
         st.error(f"Not enough questions available ({len(pool)} found, need {n_questions}). "
                  "Loosen filters or enable already-correct questions.")
@@ -537,7 +545,13 @@ def init_quiz(
     for q in pool:
         by_paper[q["paper_key"]].append(q)
     eligible_papers = [k for k, qs in by_paper.items() if len(qs) >= n_questions]
-    if eligible_papers and source_filter != "All":
+    if quiz_mode == "Paper mode":
+        if not eligible_papers:
+            st.error("Paper mode needs one paper with enough matching questions. Loosen filters or reduce question count.")
+            return False
+        chosen_paper = random.choice(eligible_papers) if source_filter == "All" else eligible_papers[0]
+        selected = sorted(by_paper[chosen_paper], key=lambda item: int(item["id"].rsplit("_q", 1)[1]))[:n_questions]
+    elif eligible_papers and source_filter != "All":
         chosen_paper = random.choice(eligible_papers)
         selected = random.sample(by_paper[chosen_paper], n_questions)
     else:
@@ -613,29 +627,12 @@ def build_quiz_results() -> tuple[list[dict], dict]:
             "mode": st.session_state.get("quiz_mode", "Timed test"),
         })
 
-    n_q = len(rows)
-    n_correct = sum(1 for r in rows if r["correct"])
-    lucky = sum(1 for r in rows if r["lucky_correct"])
-    adjusted_correct = n_correct - lucky
-    summary = {
-        "date": str(date.today()),
-        "source": ", ".join(sorted({r["source"] for r in rows})),
-        "mode": st.session_state.get("quiz_mode", "Timed test"),
-        "area": st.session_state.get("quiz_area_filter", "All"),
-        "questions_attempted": n_q,
-        "correct": n_correct,
-        "adjusted_correct": adjusted_correct,
-        "time_minutes": round(time_used / 60, 1),
-        "score_percent": round(n_correct / n_q * 100, 1) if n_q else 0,
-        "adjusted_score_percent": round(adjusted_correct / n_q * 100, 1) if n_q else 0,
-        "seconds_per_question": round(time_used / n_q, 1) if n_q else 0,
-        "skipped": sum(1 for r in rows if r["skipped"]),
-        "guessed": sum(1 for r in rows if r["guessed"]),
-        "lucky_correct": lucky,
-        "slow_review": sum(1 for r in rows if r["slow"]),
-        "topics": ", ".join(sorted({r["topic"] for r in rows})),
-        "time_used": time_used,
-    }
+    summary = summarize_attempt_rows(
+        rows,
+        time_used,
+        mode=st.session_state.get("quiz_mode", "Timed test"),
+        area=st.session_state.get("quiz_area_filter", "All"),
+    )
     return rows, summary
 
 
@@ -644,7 +641,7 @@ def end_quiz() -> None:
     rows, summary = build_quiz_results()
     mastered_ids = [
         r["id"] for r in rows
-        if r["correct"] and r["confidence"] == "Confident" and not r["slow"]
+        if is_mastered(r)
     ]
 
     progress = load_progress()
@@ -664,10 +661,7 @@ def end_quiz() -> None:
 
 
 def error_log_rows(rows: list[dict]) -> list[dict]:
-    return [
-        r for r in rows
-        if (not r["correct"]) or r["lucky_correct"] or r["skipped"] or r["slow"]
-    ]
+    return [r for r in rows if is_review_attempt(r)]
 
 
 def append_error_log(rows: list[dict]) -> int:
@@ -690,6 +684,7 @@ def append_error_log(rows: list[dict]) -> int:
             root = "Needs review"
         faster = "Use elimination, units, limiting cases or substitution before long derivation"
         action = "Redo this question and one related mini-drill"
+        due_date = next_due_date(r["date"], 0)
         lines.append(
             "| " + " | ".join([
                 markdown_escape(r["date"]),
@@ -704,7 +699,7 @@ def append_error_log(rows: list[dict]) -> int:
                 root,
                 faster,
                 action,
-                "pending",
+                due_date,
                 "pending",
             ]) + " |"
         )
@@ -745,6 +740,57 @@ def keyboard_shortcuts() -> None:
     )
 
 
+def show_exam_note(q: dict) -> None:
+    note = q.get("exam_note", {})
+    if not note:
+        return
+    st.markdown("**Fastest route:** " + note.get("fastest_route", ""))
+    st.markdown("**Common trap:** " + note.get("common_trap", ""))
+    st.markdown("**Recognition:** " + note.get("recognition_trigger", ""))
+    st.markdown("**ESAT value:** " + note.get("esat_value", ""))
+
+
+with tab5:
+    attempts = load_attempts()
+    st.subheader("Weak-Topic Dashboard")
+    if not attempts:
+        st.info("No quiz attempts yet. Complete a quiz to populate weak-topic stats and reattempts.")
+    else:
+        dashboard = topic_dashboard_rows(attempts)
+        due = build_reattempt_queue(attempts)
+
+        m1, m2, m3, m4 = st.columns(4)
+        m1.metric("Attempted questions", len(attempts))
+        m2.metric("Topics seen", len(dashboard))
+        m3.metric("Reattempts due", len(due))
+        m4.metric("Worst topic", dashboard[0]["topic"] if dashboard else "-")
+
+        st.markdown("#### Topic repair ranking")
+        st.dataframe(
+            pd.DataFrame(dashboard),
+            use_container_width=True,
+            hide_index=True,
+            column_config={
+                "topic": st.column_config.TextColumn("Topic"),
+                "attempts": st.column_config.NumberColumn("Attempts"),
+                "accuracy_percent": st.column_config.NumberColumn("Raw %"),
+                "adjusted_accuracy_percent": st.column_config.NumberColumn("Adjusted %"),
+                "avg_seconds": st.column_config.NumberColumn("Avg sec"),
+                "repair_score": st.column_config.NumberColumn("Repair score"),
+            },
+        )
+
+        st.markdown("#### Reattempt queue")
+        if due:
+            due_df = pd.DataFrame(due).reindex(columns=[
+                "due_date", "id", "source", "area", "topic", "chosen",
+                "correct_answer", "confidence", "time_spent",
+            ])
+            st.dataframe(due_df, use_container_width=True, hide_index=True)
+        else:
+            st.success("No reattempts due today.")
+
+
 with tab4:
     all_questions = load_questions()
     source_options, year_options, topic_options = get_filter_options(all_questions)
@@ -765,7 +811,7 @@ with tab4:
 
         col_mode, col_area, col_source = st.columns(3)
         with col_mode:
-            quiz_mode = st.selectbox("Mode", ["Timed test", "Drill", "Weak-topic repair"], key="quiz_mode_input")
+            quiz_mode = st.selectbox("Mode", ["Timed test", "Drill", "Weak-topic repair", "Paper mode"], key="quiz_mode_input")
         with col_area:
             area_filter = st.selectbox("Area", ["All", "Maths 1", "Maths 2", "Physics"], key="area_filter")
         with col_source:
@@ -891,6 +937,8 @@ with tab4:
                     st.markdown(f"**Confidence:** {r['confidence']}")
                     st.markdown(f"**Topic:** {r['topic']}")
                     st.markdown("---")
+                    show_exam_note(q)
+                    st.markdown("---")
                     st.markdown(q.get("technique", "No technique note for this question."))
 
         if st.button("Start new quiz", type="primary"):
@@ -954,11 +1002,13 @@ with tab4:
                     st.rerun()
                 if show_tech:
                     st.markdown(f"**Topic:** {q['topic']}")
+                    show_exam_note(q)
+                    st.markdown("---")
                     st.markdown(q.get("technique", "No technique note for this question."))
 
             st.markdown("---")
             st.markdown("**Answer**")
-            answer_letters = list("ABCDEFGH")
+            answer_letters = answer_letters_for(q)
             chosen = st.session_state.quiz_answers.get(q["id"])
             for letter in answer_letters:
                 btn_type = "primary" if chosen == letter else "secondary"

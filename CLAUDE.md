@@ -187,6 +187,7 @@ The Streamlit quiz should support three modes:
 - Timed test: no technique shown until review
 - Drill: technique may be shown during practice
 - Weak-topic repair: prioritise topics from attempt history and error log
+- Paper mode: preserve original paper order for simulation-style work
 
 Every quiz attempt should track:
 - chosen answer
@@ -204,6 +205,13 @@ Missed, skipped, lucky-correct and slow questions should be exported or copied i
 `data/attempts.jsonl` stores per-question quiz history.
 `data/progress.json` stores mastered-question progress only.
 `scores.csv` stores quiz/session score summaries.
+
+Question-bank generation should preserve:
+- all extracted questions with valid images
+- all answer keys, with manual overrides documented in `scripts/build_questions.py`
+- per-question exam notes for fastest route, common trap, recognition trigger and ESAT value
+
+Run `python scripts/validate_question_bank.py` after rebuilding the bank.
 
 ## Output standards
 

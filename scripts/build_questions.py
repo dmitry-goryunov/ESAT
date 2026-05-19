@@ -16,6 +16,15 @@ ROOT = Path(__file__).parent.parent
 IMAGES_DIR = ROOT / "data" / "images"
 OUT_FILE = ROOT / "data" / "questions.json"
 
+MANUAL_ANSWER_OVERRIDES = {
+    "tmua_2016_q20": "D",
+    "tmua_2017_q20": "E",
+    "tmua_2018_q13": "C",
+    "tmua_2018_q19": "D",
+    "tmua_2021_q17": "A",
+    "tmua_2023_q8": "B",
+}
+
 # ---------------------------------------------------------------------------
 # Module assignment
 # NSAA 2016-2019: Q1-18 = maths, Q19+ = physics
@@ -667,6 +676,49 @@ def get_source_label(qid: str) -> str:
     return f"{source} {year}"
 
 
+def get_exam_note(qid: str, topic: str, module: str) -> dict[str, str]:
+    fastest = {
+        "algebra": "Try option substitution or special values before expanding.",
+        "ratio": "Convert to multipliers and compare scale factors directly.",
+        "geometry": "Redraw the key triangle/shape and mark equal or perpendicular structure first.",
+        "probability": "Build the sample space or use the complement before multiplying branches.",
+        "functions": "Track intercepts, turning points and transformations rather than expanding.",
+        "graphs": "Decide whether the graph is asking for area, gradient, intercept or crossings.",
+        "sequences": "Generate early terms and look for a recurrence or telescoping pattern.",
+        "mechanics": "Choose force, momentum or energy first; avoid mixing them mid-route.",
+        "waves": "Start with v = fλ or path difference; halve echo paths.",
+        "circuits": "Reduce the circuit or identify fixed voltage/current constraints first.",
+        "nuclear": "Balance mass number and proton number in a ledger.",
+        "energy": "Write input = useful + wasted, then choose the shortest energy equation.",
+        "thermal": "Check transfer direction and whether all material changes state.",
+    }.get(topic, "Try units, limiting cases, substitution or elimination before full derivation.")
+    trap = {
+        "algebra": "Expanding too early and losing the structure of the options.",
+        "ratio": "Averaging ratios or speeds instead of totals.",
+        "geometry": "Using the diagram as if it were to scale.",
+        "probability": "Counting unordered outcomes when order matters.",
+        "functions": "Transforming the whole expression when one key point is enough.",
+        "graphs": "Confusing gradient with area.",
+        "mechanics": "Using applied force where resultant force is needed.",
+        "waves": "Forgetting that echo/ultrasound paths are there and back.",
+        "circuits": "Assuming one resistor keeps the same voltage in a changing series circuit.",
+        "nuclear": "Changing mass number during beta-minus decay.",
+        "energy": "Using distance along a slope instead of vertical height.",
+        "thermal": "Ignoring background/latent heat/equilibrium checks.",
+    }.get(topic, "Committing to long algebra before checking options.")
+    recognition = f"If a {topic} question looks long, first ask which option-killer applies: units, scale, graph shape or substitution."
+    source = qid.split("_", 1)[0].upper()
+    esat_value = "High" if source in {"NSAA", "ENGAA"} else "Medium" if source == "TMUA" else "Repair"
+    if module == "physics" and source == "PAT":
+        esat_value = "Concept repair"
+    return {
+        "fastest_route": fastest,
+        "common_trap": trap,
+        "recognition_trigger": recognition,
+        "esat_value": esat_value,
+    }
+
+
 # ---------------------------------------------------------------------------
 # Main build
 # ---------------------------------------------------------------------------
@@ -692,7 +744,7 @@ def build():
         source_label = get_source_label(qid)
 
         answer_map = all_keys.get(source_key, {})
-        answer = answer_map.get(qnum, "")
+        answer = MANUAL_ANSWER_OVERRIDES.get(qid, answer_map.get(qnum, ""))
 
         if not answer:
             missing_answers.append(qid)
@@ -705,6 +757,7 @@ def build():
             "image": f"data/images/{qid}.png",
             "answer": answer,
             "technique": technique,
+            "exam_note": get_exam_note(qid, topic, module),
         })
 
     OUT_FILE.write_text(json.dumps(questions, indent=2, ensure_ascii=False), encoding="utf-8")

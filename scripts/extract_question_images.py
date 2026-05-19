@@ -44,6 +44,21 @@ _PART_NAMES = ("PART A", "PART B", "PART C", "PART D", "PART E")
 # Matches a 1-2 digit question number at the start of a line, followed by a capital letter.
 _Q_NUM = re.compile(r"(?:^|\n)(\d{1,2}) [A-Z]")
 
+PAGE_FALLBACKS = {
+    "nsaa_2017_q16": ("papers/nsaa/NSAA_2017_S1_QuestionPaper.pdf", 14),
+    "nsaa_2018_q6": ("papers/nsaa/NSAA_2018_S1_QuestionPaper.pdf", 9),
+    "nsaa_2018_q12": ("papers/nsaa/NSAA_2018_S1_QuestionPaper.pdf", 13),
+    "nsaa_2018_q16": ("papers/nsaa/NSAA_2018_S1_QuestionPaper.pdf", 16),
+    "nsaa_2019_q18": ("papers/nsaa/NSAA_2019_S1_QuestionPaper.pdf", 16),
+    "nsaa_2022_q10": ("papers/nsaa/NSAA_2022_S1_QuestionPaper.pdf", 10),
+    "nsaa_2023_q14": ("papers/nsaa/NSAA_2023_S1_QuestionPaper.pdf", 12),
+    "nsaa_2023_q33": ("papers/nsaa/NSAA_2023_S1_QuestionPaper.pdf", 26),
+    "engaa_2017_q25": ("papers/engaa/ENGAA_2017_S1_QuestionPaper.pdf", 18),
+    "engaa_2018_q9": ("papers/engaa/ENGAA_2018_S1_QuestionPaper.pdf", 9),
+    "engaa_2018_q23": ("papers/engaa/ENGAA_2018_S1_QuestionPaper.pdf", 19),
+    "engaa_2019_q19": ("papers/engaa/ENGAA_2019_S1_QuestionPaper.pdf", 16),
+}
+
 
 def scan_question_pages(
     pdf_path: Path,
@@ -162,6 +177,11 @@ def generate_manifest() -> list[tuple[str, str, int]]:
             "papers/tmua/TMUA-early-specimen-paper-1.pdf",
             _spec_pages[q],
         ))
+
+    existing_ids = {qid for qid, _, _ in entries}
+    for qid, (rel_pdf, page_idx) in PAGE_FALLBACKS.items():
+        if qid not in existing_ids:
+            entries.append((qid, rel_pdf, page_idx))
 
     return entries
 

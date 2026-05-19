@@ -1,5 +1,27 @@
 # Changelog
 
+## 2026-05-19 - Quiz repair and dashboard pass
+
+Improved the quiz app and question bank after the initial workflow upgrade.
+
+Changed:
+- fixed all six missing TMUA answers with documented manual overrides
+- added extractor fallbacks for previously missed NSAA and ENGAA question images
+- rebuilt `data/questions.json` to 668 usable questions with answers and images
+- added per-question exam notes: fastest route, common trap, recognition trigger and ESAT value
+- added a Weak Dashboard tab using `data/attempts.jsonl`
+- added spaced reattempt scheduling for missed, lucky, skipped and slow questions
+- added Paper mode to preserve original question order for simulation-style practice
+- added source-aware answer options so TMUA uses fewer answer buttons than NSAA/ENGAA
+- added Streamlit Cloud config and pinned deployment dependencies
+- added pure quiz-logic helpers plus unit tests
+- updated validation to report missing exam notes
+
+Rationale:
+- this makes the quiz less random-practice and more diagnostic repair, while keeping full-paper timing available
+
+---
+
 ## 2026-05-19 - Quiz workflow upgrade
 
 Upgraded the Streamlit quiz workflow.

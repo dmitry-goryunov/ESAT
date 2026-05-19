@@ -34,6 +34,7 @@ def main() -> int:
     duplicate_ids = [qid for qid, count in Counter(ids).items() if count > 1]
     missing_answers = [q for q in questions if not q.get("answer")]
     missing_images = [q for q in questions if not (ROOT / q["image"]).exists()]
+    missing_exam_notes = [q for q in questions if not q.get("exam_note")]
 
     by_source: dict[str, list[int]] = defaultdict(list)
     for q in questions:
@@ -57,6 +58,7 @@ def main() -> int:
     print(f"Usable with answers: {len(questions) - len(missing_answers)}")
     print(f"Missing answers: {len(missing_answers)}")
     print(f"Missing images: {len(missing_images)}")
+    print(f"Missing exam notes: {len(missing_exam_notes)}")
     print(f"Duplicate ids: {len(duplicate_ids)}")
     print()
 
