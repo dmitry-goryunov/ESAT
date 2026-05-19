@@ -504,17 +504,38 @@ with tab4:
             unsafe_allow_html=True,
         )
 
-        rows = []
+        st.markdown("**Click any row to review the question, answer, and technique.**")
         for i, q in enumerate(st.session_state.quiz_questions, 1):
             chosen = st.session_state.quiz_answers.get(q["id"], "—")
             correct = q["answer"]
-            result = "✓" if chosen == correct else "✗"
-            rows.append({
-                "Q": i, "Source": q["source"], "Topic": q["topic"],
-                "Your answer": chosen, "Correct": correct, "Result": result,
-            })
-        st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
+            is_correct = chosen == correct
+            result_icon = "✓" if is_correct else "✗"
+            label = (
+                f"{result_icon} Q{i} · {q['source']} · {q['topic'].capitalize()} "
+                f"· Your answer: **{chosen}** · Correct: **{correct}**"
+            )
+            with st.expander(label, expanded=False):
+                ecol_img, ecol_info = st.columns([3, 1])
+                with ecol_img:
+                    img_path = ROOT / q["image"]
+                    if img_path.exists():
+                        st.image(str(img_path), width=600)
+                    else:
+                        st.warning(f"Image not found: {q['image']}")
+                with ecol_info:
+                    ans_color = "#4caf50" if is_correct else "#f44336"
+                    st.markdown(
+                        f"<p style='font-size:15px'>Your answer: "
+                        f"<b style='color:{ans_color}'>{chosen}</b></p>"
+                        f"<p style='font-size:15px'>Correct: "
+                        f"<b style='color:#4caf50'>{correct}</b></p>",
+                        unsafe_allow_html=True,
+                    )
+                    st.markdown("---")
+                    st.markdown(f"**Topic:** {q['topic']}")
+                    st.markdown(q.get("technique", "No technique note for this question."))
 
+        st.markdown("")
         if st.button("Start new quiz", type="primary"):
             for key in ["quiz_active", "quiz_done", "quiz_questions", "quiz_index",
                         "quiz_answers", "quiz_session_start", "quiz_q_start",
