@@ -1,0 +1,2045 @@
+[
+  {
+    "id": "engaa_2016_q10",
+    "source": "ENGAA 2016",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/engaa_2016_q10.png",
+    "answer": "D",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "engaa_2016_q12",
+    "source": "ENGAA 2016",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/engaa_2016_q12.png",
+    "answer": "E",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "engaa_2016_q14",
+    "source": "ENGAA 2016",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/engaa_2016_q14.png",
+    "answer": "H",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "engaa_2016_q16",
+    "source": "ENGAA 2016",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/engaa_2016_q16.png",
+    "answer": "F",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "engaa_2016_q2",
+    "source": "ENGAA 2016",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/engaa_2016_q2.png",
+    "answer": "D",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "engaa_2016_q20",
+    "source": "ENGAA 2016",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/engaa_2016_q20.png",
+    "answer": "D",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "engaa_2016_q22",
+    "source": "ENGAA 2016",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/engaa_2016_q22.png",
+    "answer": "A",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "engaa_2016_q23",
+    "source": "ENGAA 2016",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/engaa_2016_q23.png",
+    "answer": "D",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "engaa_2016_q28",
+    "source": "ENGAA 2016",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/engaa_2016_q28.png",
+    "answer": "G",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "engaa_2016_q4",
+    "source": "ENGAA 2016",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/engaa_2016_q4.png",
+    "answer": "F",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "engaa_2016_q6",
+    "source": "ENGAA 2016",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/engaa_2016_q6.png",
+    "answer": "C",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "engaa_2016_q8",
+    "source": "ENGAA 2016",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/engaa_2016_q8.png",
+    "answer": "D",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "engaa_2017_q1",
+    "source": "ENGAA 2017",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/engaa_2017_q1.png",
+    "answer": "F",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "engaa_2017_q2",
+    "source": "ENGAA 2017",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/engaa_2017_q2.png",
+    "answer": "B",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "engaa_2017_q3",
+    "source": "ENGAA 2017",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/engaa_2017_q3.png",
+    "answer": "E",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "engaa_2017_q4",
+    "source": "ENGAA 2017",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/engaa_2017_q4.png",
+    "answer": "G",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "engaa_2017_q5",
+    "source": "ENGAA 2017",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/engaa_2017_q5.png",
+    "answer": "B",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "engaa_2018_q1",
+    "source": "ENGAA 2018",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/engaa_2018_q1.png",
+    "answer": "E",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "engaa_2018_q2",
+    "source": "ENGAA 2018",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/engaa_2018_q2.png",
+    "answer": "B",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "engaa_2018_q3",
+    "source": "ENGAA 2018",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/engaa_2018_q3.png",
+    "answer": "B",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "engaa_2019_q1",
+    "source": "ENGAA 2019",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/engaa_2019_q1.png",
+    "answer": "F",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "engaa_2019_q2",
+    "source": "ENGAA 2019",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/engaa_2019_q2.png",
+    "answer": "F",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "engaa_2020_q1",
+    "source": "ENGAA 2020",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/engaa_2020_q1.png",
+    "answer": "D",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "engaa_2020_q2",
+    "source": "ENGAA 2020",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/engaa_2020_q2.png",
+    "answer": "C",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "engaa_2021_q1",
+    "source": "ENGAA 2021",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/engaa_2021_q1.png",
+    "answer": "E",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "engaa_2021_q2",
+    "source": "ENGAA 2021",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/engaa_2021_q2.png",
+    "answer": "E",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "engaa_2022_q1",
+    "source": "ENGAA 2022",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/engaa_2022_q1.png",
+    "answer": "E",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "engaa_2022_q2",
+    "source": "ENGAA 2022",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/engaa_2022_q2.png",
+    "answer": "A",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "engaa_2023_q1",
+    "source": "ENGAA 2023",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/engaa_2023_q1.png",
+    "answer": "A",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "engaa_2023_q2",
+    "source": "ENGAA 2023",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/engaa_2023_q2.png",
+    "answer": "F",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2016_q12",
+    "source": "NSAA 2016",
+    "module": "maths",
+    "topic": "geometry",
+    "image": "data/images/nsaa_2016_q12.png",
+    "answer": "D",
+    "technique": "Redraw diagrams cleanly. Mark right angles, equal lengths, parallel lines and tangents first. Use area formulae before coordinate methods."
+  },
+  {
+    "id": "nsaa_2016_q14",
+    "source": "NSAA 2016",
+    "module": "maths",
+    "topic": "probability",
+    "image": "data/images/nsaa_2016_q14.png",
+    "answer": "E",
+    "technique": "Use complement for 'at least one'. Use a two-way table for category questions. For without-replacement, reduce numerator and denominator after each draw."
+  },
+  {
+    "id": "nsaa_2016_q15",
+    "source": "NSAA 2016",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2016_q15.png",
+    "answer": "B",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2016_q18",
+    "source": "NSAA 2016",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2016_q18.png",
+    "answer": "F",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2016_q21",
+    "source": "NSAA 2016",
+    "module": "physics",
+    "topic": "nuclear",
+    "image": "data/images/nsaa_2016_q21.png",
+    "answer": "H",
+    "technique": "Make an A/Z ledger. Alpha: -4 mass, -2 proton. Beta minus: mass unchanged, proton +1. Background count must be subtracted before halving for half-life."
+  },
+  {
+    "id": "nsaa_2016_q24",
+    "source": "NSAA 2016",
+    "module": "physics",
+    "topic": "waves",
+    "image": "data/images/nsaa_2016_q24.png",
+    "answer": "D",
+    "technique": "Start with v = fλ. Frequency stays constant across a medium boundary. One oscillation = 4A particle travel. Echo/ultrasound path is there and back (halve)."
+  },
+  {
+    "id": "nsaa_2016_q25",
+    "source": "NSAA 2016",
+    "module": "physics",
+    "topic": "nuclear",
+    "image": "data/images/nsaa_2016_q25.png",
+    "answer": "E",
+    "technique": "Make an A/Z ledger. Alpha: -4 mass, -2 proton. Beta minus: mass unchanged, proton +1. Background count must be subtracted before halving for half-life."
+  },
+  {
+    "id": "nsaa_2016_q26",
+    "source": "NSAA 2016",
+    "module": "physics",
+    "topic": "energy",
+    "image": "data/images/nsaa_2016_q26.png",
+    "answer": "D",
+    "technique": "Write an energy audit: input = useful + wasted. Efficiency = useful output / input. Power = energy / time. Gravitational PE = mgh."
+  },
+  {
+    "id": "nsaa_2016_q27",
+    "source": "NSAA 2016",
+    "module": "physics",
+    "topic": "energy",
+    "image": "data/images/nsaa_2016_q27.png",
+    "answer": "E",
+    "technique": "Write an energy audit: input = useful + wasted. Efficiency = useful output / input. Power = energy / time. Gravitational PE = mgh."
+  },
+  {
+    "id": "nsaa_2016_q28",
+    "source": "NSAA 2016",
+    "module": "physics",
+    "topic": "circuits",
+    "image": "data/images/nsaa_2016_q28.png",
+    "answer": "H",
+    "technique": "Find equivalent resistance first. Series: same current. Parallel: same voltage. Use P=IV, I²R or V²/R depending on which quantities are known."
+  },
+  {
+    "id": "nsaa_2016_q32",
+    "source": "NSAA 2016",
+    "module": "physics",
+    "topic": "circuits",
+    "image": "data/images/nsaa_2016_q32.png",
+    "answer": "A",
+    "technique": "Find equivalent resistance first. Series: same current. Parallel: same voltage. Use P=IV, I²R or V²/R depending on which quantities are known."
+  },
+  {
+    "id": "nsaa_2016_q35",
+    "source": "NSAA 2016",
+    "module": "physics",
+    "topic": "nuclear",
+    "image": "data/images/nsaa_2016_q35.png",
+    "answer": "D",
+    "technique": "Make an A/Z ledger. Alpha: -4 mass, -2 proton. Beta minus: mass unchanged, proton +1. Background count must be subtracted before halving for half-life."
+  },
+  {
+    "id": "nsaa_2016_q36",
+    "source": "NSAA 2016",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2016_q36.png",
+    "answer": "G",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2016_q7",
+    "source": "NSAA 2016",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2016_q7.png",
+    "answer": "F",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2016_q8",
+    "source": "NSAA 2016",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2016_q8.png",
+    "answer": "E",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2017_q10",
+    "source": "NSAA 2017",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2017_q10.png",
+    "answer": "F",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2017_q12",
+    "source": "NSAA 2017",
+    "module": "maths",
+    "topic": "geometry",
+    "image": "data/images/nsaa_2017_q12.png",
+    "answer": "B",
+    "technique": "Redraw diagrams cleanly. Mark right angles, equal lengths, parallel lines and tangents first. Use area formulae before coordinate methods."
+  },
+  {
+    "id": "nsaa_2017_q13",
+    "source": "NSAA 2017",
+    "module": "maths",
+    "topic": "geometry",
+    "image": "data/images/nsaa_2017_q13.png",
+    "answer": "B",
+    "technique": "Redraw diagrams cleanly. Mark right angles, equal lengths, parallel lines and tangents first. Use area formulae before coordinate methods."
+  },
+  {
+    "id": "nsaa_2017_q14",
+    "source": "NSAA 2017",
+    "module": "maths",
+    "topic": "probability",
+    "image": "data/images/nsaa_2017_q14.png",
+    "answer": "D",
+    "technique": "Use complement for 'at least one'. Use a two-way table for category questions. For without-replacement, reduce numerator and denominator after each draw."
+  },
+  {
+    "id": "nsaa_2017_q15",
+    "source": "NSAA 2017",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2017_q15.png",
+    "answer": "C",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2017_q17",
+    "source": "NSAA 2017",
+    "module": "maths",
+    "topic": "ratio",
+    "image": "data/images/nsaa_2017_q17.png",
+    "answer": "G",
+    "technique": "Use multipliers, not additive language. Reverse percentages by dividing by the multiplier. For combined ratios, make the shared quantity match."
+  },
+  {
+    "id": "nsaa_2017_q18",
+    "source": "NSAA 2017",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2017_q18.png",
+    "answer": "E",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2017_q19",
+    "source": "NSAA 2017",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2017_q19.png",
+    "answer": "B",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2017_q21",
+    "source": "NSAA 2017",
+    "module": "physics",
+    "topic": "nuclear",
+    "image": "data/images/nsaa_2017_q21.png",
+    "answer": "E",
+    "technique": "Make an A/Z ledger. Alpha: -4 mass, -2 proton. Beta minus: mass unchanged, proton +1. Background count must be subtracted before halving for half-life."
+  },
+  {
+    "id": "nsaa_2017_q25",
+    "source": "NSAA 2017",
+    "module": "physics",
+    "topic": "nuclear",
+    "image": "data/images/nsaa_2017_q25.png",
+    "answer": "B",
+    "technique": "Make an A/Z ledger. Alpha: -4 mass, -2 proton. Beta minus: mass unchanged, proton +1. Background count must be subtracted before halving for half-life."
+  },
+  {
+    "id": "nsaa_2017_q28",
+    "source": "NSAA 2017",
+    "module": "physics",
+    "topic": "circuits",
+    "image": "data/images/nsaa_2017_q28.png",
+    "answer": "A",
+    "technique": "Find equivalent resistance first. Series: same current. Parallel: same voltage. Use P=IV, I²R or V²/R depending on which quantities are known."
+  },
+  {
+    "id": "nsaa_2017_q29",
+    "source": "NSAA 2017",
+    "module": "physics",
+    "topic": "circuits",
+    "image": "data/images/nsaa_2017_q29.png",
+    "answer": "E",
+    "technique": "Find equivalent resistance first. Series: same current. Parallel: same voltage. Use P=IV, I²R or V²/R depending on which quantities are known."
+  },
+  {
+    "id": "nsaa_2017_q31",
+    "source": "NSAA 2017",
+    "module": "physics",
+    "topic": "thermal",
+    "image": "data/images/nsaa_2017_q31.png",
+    "answer": "C",
+    "technique": "For conduction: rate ∝ area × ΔT / length. Poorer conductor has steeper temperature drop. Latent heat required if phase change occurs."
+  },
+  {
+    "id": "nsaa_2017_q33",
+    "source": "NSAA 2017",
+    "module": "physics",
+    "topic": "waves",
+    "image": "data/images/nsaa_2017_q33.png",
+    "answer": "C",
+    "technique": "Start with v = fλ. Frequency stays constant across a medium boundary. One oscillation = 4A particle travel. Echo/ultrasound path is there and back (halve)."
+  },
+  {
+    "id": "nsaa_2017_q34",
+    "source": "NSAA 2017",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2017_q34.png",
+    "answer": "D",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2017_q36",
+    "source": "NSAA 2017",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2017_q36.png",
+    "answer": "E",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2017_q5",
+    "source": "NSAA 2017",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2017_q5.png",
+    "answer": "E",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2018_q14",
+    "source": "NSAA 2018",
+    "module": "maths",
+    "topic": "probability",
+    "image": "data/images/nsaa_2018_q14.png",
+    "answer": "A",
+    "technique": "Use complement for 'at least one'. Use a two-way table for category questions. For without-replacement, reduce numerator and denominator after each draw."
+  },
+  {
+    "id": "nsaa_2018_q15",
+    "source": "NSAA 2018",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2018_q15.png",
+    "answer": "C",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2018_q16",
+    "source": "NSAA 2018",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2018_q16.png",
+    "answer": "C",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2018_q18",
+    "source": "NSAA 2018",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2018_q18.png",
+    "answer": "B",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2018_q20",
+    "source": "NSAA 2018",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2018_q20.png",
+    "answer": "B",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2018_q22",
+    "source": "NSAA 2018",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2018_q22.png",
+    "answer": "E",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2018_q24",
+    "source": "NSAA 2018",
+    "module": "physics",
+    "topic": "waves",
+    "image": "data/images/nsaa_2018_q24.png",
+    "answer": "C",
+    "technique": "Start with v = fλ. Frequency stays constant across a medium boundary. One oscillation = 4A particle travel. Echo/ultrasound path is there and back (halve)."
+  },
+  {
+    "id": "nsaa_2018_q27",
+    "source": "NSAA 2018",
+    "module": "physics",
+    "topic": "energy",
+    "image": "data/images/nsaa_2018_q27.png",
+    "answer": "A",
+    "technique": "Write an energy audit: input = useful + wasted. Efficiency = useful output / input. Power = energy / time. Gravitational PE = mgh."
+  },
+  {
+    "id": "nsaa_2018_q28",
+    "source": "NSAA 2018",
+    "module": "physics",
+    "topic": "circuits",
+    "image": "data/images/nsaa_2018_q28.png",
+    "answer": "C",
+    "technique": "Find equivalent resistance first. Series: same current. Parallel: same voltage. Use P=IV, I²R or V²/R depending on which quantities are known."
+  },
+  {
+    "id": "nsaa_2018_q31",
+    "source": "NSAA 2018",
+    "module": "physics",
+    "topic": "thermal",
+    "image": "data/images/nsaa_2018_q31.png",
+    "answer": "B",
+    "technique": "For conduction: rate ∝ area × ΔT / length. Poorer conductor has steeper temperature drop. Latent heat required if phase change occurs."
+  },
+  {
+    "id": "nsaa_2018_q32",
+    "source": "NSAA 2018",
+    "module": "physics",
+    "topic": "circuits",
+    "image": "data/images/nsaa_2018_q32.png",
+    "answer": "E",
+    "technique": "Find equivalent resistance first. Series: same current. Parallel: same voltage. Use P=IV, I²R or V²/R depending on which quantities are known."
+  },
+  {
+    "id": "nsaa_2018_q34",
+    "source": "NSAA 2018",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2018_q34.png",
+    "answer": "C",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2018_q35",
+    "source": "NSAA 2018",
+    "module": "physics",
+    "topic": "nuclear",
+    "image": "data/images/nsaa_2018_q35.png",
+    "answer": "E",
+    "technique": "Make an A/Z ledger. Alpha: -4 mass, -2 proton. Beta minus: mass unchanged, proton +1. Background count must be subtracted before halving for half-life."
+  },
+  {
+    "id": "nsaa_2018_q36",
+    "source": "NSAA 2018",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2018_q36.png",
+    "answer": "A",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2018_q4",
+    "source": "NSAA 2018",
+    "module": "maths",
+    "topic": "probability",
+    "image": "data/images/nsaa_2018_q4.png",
+    "answer": "D",
+    "technique": "Use complement for 'at least one'. Use a two-way table for category questions. For without-replacement, reduce numerator and denominator after each draw."
+  },
+  {
+    "id": "nsaa_2018_q6",
+    "source": "NSAA 2018",
+    "module": "maths",
+    "topic": "geometry",
+    "image": "data/images/nsaa_2018_q6.png",
+    "answer": "E",
+    "technique": "Redraw diagrams cleanly. Mark right angles, equal lengths, parallel lines and tangents first. Use area formulae before coordinate methods."
+  },
+  {
+    "id": "nsaa_2018_q7",
+    "source": "NSAA 2018",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2018_q7.png",
+    "answer": "A",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2018_q8",
+    "source": "NSAA 2018",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2018_q8.png",
+    "answer": "C",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2019_q10",
+    "source": "NSAA 2019",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2019_q10.png",
+    "answer": "D",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2019_q14",
+    "source": "NSAA 2019",
+    "module": "maths",
+    "topic": "probability",
+    "image": "data/images/nsaa_2019_q14.png",
+    "answer": "G",
+    "technique": "Use complement for 'at least one'. Use a two-way table for category questions. For without-replacement, reduce numerator and denominator after each draw."
+  },
+  {
+    "id": "nsaa_2019_q15",
+    "source": "NSAA 2019",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2019_q15.png",
+    "answer": "C",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2019_q16",
+    "source": "NSAA 2019",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2019_q16.png",
+    "answer": "C",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2019_q17",
+    "source": "NSAA 2019",
+    "module": "maths",
+    "topic": "ratio",
+    "image": "data/images/nsaa_2019_q17.png",
+    "answer": "C",
+    "technique": "Use multipliers, not additive language. Reverse percentages by dividing by the multiplier. For combined ratios, make the shared quantity match."
+  },
+  {
+    "id": "nsaa_2019_q18",
+    "source": "NSAA 2019",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2019_q18.png",
+    "answer": "E",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2019_q19",
+    "source": "NSAA 2019",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2019_q19.png",
+    "answer": "B",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2019_q21",
+    "source": "NSAA 2019",
+    "module": "physics",
+    "topic": "nuclear",
+    "image": "data/images/nsaa_2019_q21.png",
+    "answer": "F",
+    "technique": "Make an A/Z ledger. Alpha: -4 mass, -2 proton. Beta minus: mass unchanged, proton +1. Background count must be subtracted before halving for half-life."
+  },
+  {
+    "id": "nsaa_2019_q25",
+    "source": "NSAA 2019",
+    "module": "physics",
+    "topic": "nuclear",
+    "image": "data/images/nsaa_2019_q25.png",
+    "answer": "A",
+    "technique": "Make an A/Z ledger. Alpha: -4 mass, -2 proton. Beta minus: mass unchanged, proton +1. Background count must be subtracted before halving for half-life."
+  },
+  {
+    "id": "nsaa_2019_q27",
+    "source": "NSAA 2019",
+    "module": "physics",
+    "topic": "energy",
+    "image": "data/images/nsaa_2019_q27.png",
+    "answer": "E",
+    "technique": "Write an energy audit: input = useful + wasted. Efficiency = useful output / input. Power = energy / time. Gravitational PE = mgh."
+  },
+  {
+    "id": "nsaa_2019_q29",
+    "source": "NSAA 2019",
+    "module": "physics",
+    "topic": "circuits",
+    "image": "data/images/nsaa_2019_q29.png",
+    "answer": "C",
+    "technique": "Find equivalent resistance first. Series: same current. Parallel: same voltage. Use P=IV, I²R or V²/R depending on which quantities are known."
+  },
+  {
+    "id": "nsaa_2019_q30",
+    "source": "NSAA 2019",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2019_q30.png",
+    "answer": "C",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2019_q31",
+    "source": "NSAA 2019",
+    "module": "physics",
+    "topic": "thermal",
+    "image": "data/images/nsaa_2019_q31.png",
+    "answer": "C",
+    "technique": "For conduction: rate ∝ area × ΔT / length. Poorer conductor has steeper temperature drop. Latent heat required if phase change occurs."
+  },
+  {
+    "id": "nsaa_2019_q32",
+    "source": "NSAA 2019",
+    "module": "physics",
+    "topic": "circuits",
+    "image": "data/images/nsaa_2019_q32.png",
+    "answer": "E",
+    "technique": "Find equivalent resistance first. Series: same current. Parallel: same voltage. Use P=IV, I²R or V²/R depending on which quantities are known."
+  },
+  {
+    "id": "nsaa_2019_q33",
+    "source": "NSAA 2019",
+    "module": "physics",
+    "topic": "waves",
+    "image": "data/images/nsaa_2019_q33.png",
+    "answer": "F",
+    "technique": "Start with v = fλ. Frequency stays constant across a medium boundary. One oscillation = 4A particle travel. Echo/ultrasound path is there and back (halve)."
+  },
+  {
+    "id": "nsaa_2019_q36",
+    "source": "NSAA 2019",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2019_q36.png",
+    "answer": "B",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2019_q7",
+    "source": "NSAA 2019",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2019_q7.png",
+    "answer": "B",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2019_q9",
+    "source": "NSAA 2019",
+    "module": "maths",
+    "topic": "ratio",
+    "image": "data/images/nsaa_2019_q9.png",
+    "answer": "A",
+    "technique": "Use multipliers, not additive language. Reverse percentages by dividing by the multiplier. For combined ratios, make the shared quantity match."
+  },
+  {
+    "id": "nsaa_2020_q11",
+    "source": "NSAA 2020",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2020_q11.png",
+    "answer": "B",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2020_q12",
+    "source": "NSAA 2020",
+    "module": "maths",
+    "topic": "geometry",
+    "image": "data/images/nsaa_2020_q12.png",
+    "answer": "F",
+    "technique": "Redraw diagrams cleanly. Mark right angles, equal lengths, parallel lines and tangents first. Use area formulae before coordinate methods."
+  },
+  {
+    "id": "nsaa_2020_q15",
+    "source": "NSAA 2020",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2020_q15.png",
+    "answer": "E",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2020_q17",
+    "source": "NSAA 2020",
+    "module": "maths",
+    "topic": "ratio",
+    "image": "data/images/nsaa_2020_q17.png",
+    "answer": "D",
+    "technique": "Use multipliers, not additive language. Reverse percentages by dividing by the multiplier. For combined ratios, make the shared quantity match."
+  },
+  {
+    "id": "nsaa_2020_q18",
+    "source": "NSAA 2020",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2020_q18.png",
+    "answer": "B",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2020_q20",
+    "source": "NSAA 2020",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2020_q20.png",
+    "answer": "C",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2020_q21",
+    "source": "NSAA 2020",
+    "module": "physics",
+    "topic": "nuclear",
+    "image": "data/images/nsaa_2020_q21.png",
+    "answer": "C",
+    "technique": "Make an A/Z ledger. Alpha: -4 mass, -2 proton. Beta minus: mass unchanged, proton +1. Background count must be subtracted before halving for half-life."
+  },
+  {
+    "id": "nsaa_2020_q23",
+    "source": "NSAA 2020",
+    "module": "physics",
+    "topic": "waves",
+    "image": "data/images/nsaa_2020_q23.png",
+    "answer": "F",
+    "technique": "Start with v = fλ. Frequency stays constant across a medium boundary. One oscillation = 4A particle travel. Echo/ultrasound path is there and back (halve)."
+  },
+  {
+    "id": "nsaa_2020_q24",
+    "source": "NSAA 2020",
+    "module": "physics",
+    "topic": "waves",
+    "image": "data/images/nsaa_2020_q24.png",
+    "answer": "A",
+    "technique": "Start with v = fλ. Frequency stays constant across a medium boundary. One oscillation = 4A particle travel. Echo/ultrasound path is there and back (halve)."
+  },
+  {
+    "id": "nsaa_2020_q27",
+    "source": "NSAA 2020",
+    "module": "physics",
+    "topic": "energy",
+    "image": "data/images/nsaa_2020_q27.png",
+    "answer": "E",
+    "technique": "Write an energy audit: input = useful + wasted. Efficiency = useful output / input. Power = energy / time. Gravitational PE = mgh."
+  },
+  {
+    "id": "nsaa_2020_q28",
+    "source": "NSAA 2020",
+    "module": "physics",
+    "topic": "circuits",
+    "image": "data/images/nsaa_2020_q28.png",
+    "answer": "D",
+    "technique": "Find equivalent resistance first. Series: same current. Parallel: same voltage. Use P=IV, I²R or V²/R depending on which quantities are known."
+  },
+  {
+    "id": "nsaa_2020_q29",
+    "source": "NSAA 2020",
+    "module": "physics",
+    "topic": "circuits",
+    "image": "data/images/nsaa_2020_q29.png",
+    "answer": "C",
+    "technique": "Find equivalent resistance first. Series: same current. Parallel: same voltage. Use P=IV, I²R or V²/R depending on which quantities are known."
+  },
+  {
+    "id": "nsaa_2020_q3",
+    "source": "NSAA 2020",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2020_q3.png",
+    "answer": "A",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2020_q30",
+    "source": "NSAA 2020",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2020_q30.png",
+    "answer": "F",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2020_q32",
+    "source": "NSAA 2020",
+    "module": "physics",
+    "topic": "circuits",
+    "image": "data/images/nsaa_2020_q32.png",
+    "answer": "C",
+    "technique": "Find equivalent resistance first. Series: same current. Parallel: same voltage. Use P=IV, I²R or V²/R depending on which quantities are known."
+  },
+  {
+    "id": "nsaa_2020_q36",
+    "source": "NSAA 2020",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2020_q36.png",
+    "answer": "H",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2020_q37",
+    "source": "NSAA 2020",
+    "module": "physics",
+    "topic": "waves",
+    "image": "data/images/nsaa_2020_q37.png",
+    "answer": "G",
+    "technique": "Start with v = fλ. Frequency stays constant across a medium boundary. One oscillation = 4A particle travel. Echo/ultrasound path is there and back (halve)."
+  },
+  {
+    "id": "nsaa_2020_q4",
+    "source": "NSAA 2020",
+    "module": "maths",
+    "topic": "probability",
+    "image": "data/images/nsaa_2020_q4.png",
+    "answer": "A",
+    "technique": "Use complement for 'at least one'. Use a two-way table for category questions. For without-replacement, reduce numerator and denominator after each draw."
+  },
+  {
+    "id": "nsaa_2020_q40",
+    "source": "NSAA 2020",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2020_q40.png",
+    "answer": "A",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2020_q7",
+    "source": "NSAA 2020",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2020_q7.png",
+    "answer": "F",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2021_q10",
+    "source": "NSAA 2021",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2021_q10.png",
+    "answer": "E",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2021_q11",
+    "source": "NSAA 2021",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2021_q11.png",
+    "answer": "F",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2021_q12",
+    "source": "NSAA 2021",
+    "module": "maths",
+    "topic": "geometry",
+    "image": "data/images/nsaa_2021_q12.png",
+    "answer": "D",
+    "technique": "Redraw diagrams cleanly. Mark right angles, equal lengths, parallel lines and tangents first. Use area formulae before coordinate methods."
+  },
+  {
+    "id": "nsaa_2021_q14",
+    "source": "NSAA 2021",
+    "module": "maths",
+    "topic": "probability",
+    "image": "data/images/nsaa_2021_q14.png",
+    "answer": "E",
+    "technique": "Use complement for 'at least one'. Use a two-way table for category questions. For without-replacement, reduce numerator and denominator after each draw."
+  },
+  {
+    "id": "nsaa_2021_q15",
+    "source": "NSAA 2021",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2021_q15.png",
+    "answer": "B",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2021_q17",
+    "source": "NSAA 2021",
+    "module": "maths",
+    "topic": "ratio",
+    "image": "data/images/nsaa_2021_q17.png",
+    "answer": "A",
+    "technique": "Use multipliers, not additive language. Reverse percentages by dividing by the multiplier. For combined ratios, make the shared quantity match."
+  },
+  {
+    "id": "nsaa_2021_q20",
+    "source": "NSAA 2021",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2021_q20.png",
+    "answer": "F",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2021_q21",
+    "source": "NSAA 2021",
+    "module": "physics",
+    "topic": "nuclear",
+    "image": "data/images/nsaa_2021_q21.png",
+    "answer": "B",
+    "technique": "Make an A/Z ledger. Alpha: -4 mass, -2 proton. Beta minus: mass unchanged, proton +1. Background count must be subtracted before halving for half-life."
+  },
+  {
+    "id": "nsaa_2021_q23",
+    "source": "NSAA 2021",
+    "module": "physics",
+    "topic": "waves",
+    "image": "data/images/nsaa_2021_q23.png",
+    "answer": "F",
+    "technique": "Start with v = fλ. Frequency stays constant across a medium boundary. One oscillation = 4A particle travel. Echo/ultrasound path is there and back (halve)."
+  },
+  {
+    "id": "nsaa_2021_q24",
+    "source": "NSAA 2021",
+    "module": "physics",
+    "topic": "waves",
+    "image": "data/images/nsaa_2021_q24.png",
+    "answer": "A",
+    "technique": "Start with v = fλ. Frequency stays constant across a medium boundary. One oscillation = 4A particle travel. Echo/ultrasound path is there and back (halve)."
+  },
+  {
+    "id": "nsaa_2021_q28",
+    "source": "NSAA 2021",
+    "module": "physics",
+    "topic": "circuits",
+    "image": "data/images/nsaa_2021_q28.png",
+    "answer": "D",
+    "technique": "Find equivalent resistance first. Series: same current. Parallel: same voltage. Use P=IV, I²R or V²/R depending on which quantities are known."
+  },
+  {
+    "id": "nsaa_2021_q29",
+    "source": "NSAA 2021",
+    "module": "physics",
+    "topic": "circuits",
+    "image": "data/images/nsaa_2021_q29.png",
+    "answer": "E",
+    "technique": "Find equivalent resistance first. Series: same current. Parallel: same voltage. Use P=IV, I²R or V²/R depending on which quantities are known."
+  },
+  {
+    "id": "nsaa_2021_q30",
+    "source": "NSAA 2021",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2021_q30.png",
+    "answer": "H",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2021_q31",
+    "source": "NSAA 2021",
+    "module": "physics",
+    "topic": "thermal",
+    "image": "data/images/nsaa_2021_q31.png",
+    "answer": "B",
+    "technique": "For conduction: rate ∝ area × ΔT / length. Poorer conductor has steeper temperature drop. Latent heat required if phase change occurs."
+  },
+  {
+    "id": "nsaa_2021_q34",
+    "source": "NSAA 2021",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2021_q34.png",
+    "answer": "E",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2021_q35",
+    "source": "NSAA 2021",
+    "module": "physics",
+    "topic": "nuclear",
+    "image": "data/images/nsaa_2021_q35.png",
+    "answer": "D",
+    "technique": "Make an A/Z ledger. Alpha: -4 mass, -2 proton. Beta minus: mass unchanged, proton +1. Background count must be subtracted before halving for half-life."
+  },
+  {
+    "id": "nsaa_2021_q36",
+    "source": "NSAA 2021",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2021_q36.png",
+    "answer": "B",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2021_q4",
+    "source": "NSAA 2021",
+    "module": "maths",
+    "topic": "probability",
+    "image": "data/images/nsaa_2021_q4.png",
+    "answer": "A",
+    "technique": "Use complement for 'at least one'. Use a two-way table for category questions. For without-replacement, reduce numerator and denominator after each draw."
+  },
+  {
+    "id": "nsaa_2021_q40",
+    "source": "NSAA 2021",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2021_q40.png",
+    "answer": "E",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2021_q8",
+    "source": "NSAA 2021",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2021_q8.png",
+    "answer": "F",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2022_q10",
+    "source": "NSAA 2022",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2022_q10.png",
+    "answer": "B",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2022_q12",
+    "source": "NSAA 2022",
+    "module": "maths",
+    "topic": "geometry",
+    "image": "data/images/nsaa_2022_q12.png",
+    "answer": "C",
+    "technique": "Redraw diagrams cleanly. Mark right angles, equal lengths, parallel lines and tangents first. Use area formulae before coordinate methods."
+  },
+  {
+    "id": "nsaa_2022_q14",
+    "source": "NSAA 2022",
+    "module": "maths",
+    "topic": "probability",
+    "image": "data/images/nsaa_2022_q14.png",
+    "answer": "C",
+    "technique": "Use complement for 'at least one'. Use a two-way table for category questions. For without-replacement, reduce numerator and denominator after each draw."
+  },
+  {
+    "id": "nsaa_2022_q16",
+    "source": "NSAA 2022",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2022_q16.png",
+    "answer": "B",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2022_q18",
+    "source": "NSAA 2022",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2022_q18.png",
+    "answer": "A",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2022_q20",
+    "source": "NSAA 2022",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2022_q20.png",
+    "answer": "C",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2022_q21",
+    "source": "NSAA 2022",
+    "module": "physics",
+    "topic": "nuclear",
+    "image": "data/images/nsaa_2022_q21.png",
+    "answer": "A",
+    "technique": "Make an A/Z ledger. Alpha: -4 mass, -2 proton. Beta minus: mass unchanged, proton +1. Background count must be subtracted before halving for half-life."
+  },
+  {
+    "id": "nsaa_2022_q23",
+    "source": "NSAA 2022",
+    "module": "physics",
+    "topic": "waves",
+    "image": "data/images/nsaa_2022_q23.png",
+    "answer": "E",
+    "technique": "Start with v = fλ. Frequency stays constant across a medium boundary. One oscillation = 4A particle travel. Echo/ultrasound path is there and back (halve)."
+  },
+  {
+    "id": "nsaa_2022_q24",
+    "source": "NSAA 2022",
+    "module": "physics",
+    "topic": "waves",
+    "image": "data/images/nsaa_2022_q24.png",
+    "answer": "G",
+    "technique": "Start with v = fλ. Frequency stays constant across a medium boundary. One oscillation = 4A particle travel. Echo/ultrasound path is there and back (halve)."
+  },
+  {
+    "id": "nsaa_2022_q25",
+    "source": "NSAA 2022",
+    "module": "physics",
+    "topic": "nuclear",
+    "image": "data/images/nsaa_2022_q25.png",
+    "answer": "E",
+    "technique": "Make an A/Z ledger. Alpha: -4 mass, -2 proton. Beta minus: mass unchanged, proton +1. Background count must be subtracted before halving for half-life."
+  },
+  {
+    "id": "nsaa_2022_q26",
+    "source": "NSAA 2022",
+    "module": "physics",
+    "topic": "energy",
+    "image": "data/images/nsaa_2022_q26.png",
+    "answer": "B",
+    "technique": "Write an energy audit: input = useful + wasted. Efficiency = useful output / input. Power = energy / time. Gravitational PE = mgh."
+  },
+  {
+    "id": "nsaa_2022_q27",
+    "source": "NSAA 2022",
+    "module": "physics",
+    "topic": "energy",
+    "image": "data/images/nsaa_2022_q27.png",
+    "answer": "A",
+    "technique": "Write an energy audit: input = useful + wasted. Efficiency = useful output / input. Power = energy / time. Gravitational PE = mgh."
+  },
+  {
+    "id": "nsaa_2022_q30",
+    "source": "NSAA 2022",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2022_q30.png",
+    "answer": "D",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2022_q31",
+    "source": "NSAA 2022",
+    "module": "physics",
+    "topic": "thermal",
+    "image": "data/images/nsaa_2022_q31.png",
+    "answer": "E",
+    "technique": "For conduction: rate ∝ area × ΔT / length. Poorer conductor has steeper temperature drop. Latent heat required if phase change occurs."
+  },
+  {
+    "id": "nsaa_2022_q34",
+    "source": "NSAA 2022",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2022_q34.png",
+    "answer": "C",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2022_q35",
+    "source": "NSAA 2022",
+    "module": "physics",
+    "topic": "nuclear",
+    "image": "data/images/nsaa_2022_q35.png",
+    "answer": "D",
+    "technique": "Make an A/Z ledger. Alpha: -4 mass, -2 proton. Beta minus: mass unchanged, proton +1. Background count must be subtracted before halving for half-life."
+  },
+  {
+    "id": "nsaa_2022_q37",
+    "source": "NSAA 2022",
+    "module": "physics",
+    "topic": "waves",
+    "image": "data/images/nsaa_2022_q37.png",
+    "answer": "F",
+    "technique": "Start with v = fλ. Frequency stays constant across a medium boundary. One oscillation = 4A particle travel. Echo/ultrasound path is there and back (halve)."
+  },
+  {
+    "id": "nsaa_2022_q8",
+    "source": "NSAA 2022",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2022_q8.png",
+    "answer": "B",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2023_q11",
+    "source": "NSAA 2023",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2023_q11.png",
+    "answer": "B",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2023_q13",
+    "source": "NSAA 2023",
+    "module": "maths",
+    "topic": "geometry",
+    "image": "data/images/nsaa_2023_q13.png",
+    "answer": "H",
+    "technique": "Redraw diagrams cleanly. Mark right angles, equal lengths, parallel lines and tangents first. Use area formulae before coordinate methods."
+  },
+  {
+    "id": "nsaa_2023_q14",
+    "source": "NSAA 2023",
+    "module": "maths",
+    "topic": "probability",
+    "image": "data/images/nsaa_2023_q14.png",
+    "answer": "D",
+    "technique": "Use complement for 'at least one'. Use a two-way table for category questions. For without-replacement, reduce numerator and denominator after each draw."
+  },
+  {
+    "id": "nsaa_2023_q16",
+    "source": "NSAA 2023",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2023_q16.png",
+    "answer": "B",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2023_q19",
+    "source": "NSAA 2023",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2023_q19.png",
+    "answer": "C",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2023_q20",
+    "source": "NSAA 2023",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2023_q20.png",
+    "answer": "E",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2023_q21",
+    "source": "NSAA 2023",
+    "module": "physics",
+    "topic": "nuclear",
+    "image": "data/images/nsaa_2023_q21.png",
+    "answer": "G",
+    "technique": "Make an A/Z ledger. Alpha: -4 mass, -2 proton. Beta minus: mass unchanged, proton +1. Background count must be subtracted before halving for half-life."
+  },
+  {
+    "id": "nsaa_2023_q22",
+    "source": "NSAA 2023",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2023_q22.png",
+    "answer": "F",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2023_q24",
+    "source": "NSAA 2023",
+    "module": "physics",
+    "topic": "waves",
+    "image": "data/images/nsaa_2023_q24.png",
+    "answer": "F",
+    "technique": "Start with v = fλ. Frequency stays constant across a medium boundary. One oscillation = 4A particle travel. Echo/ultrasound path is there and back (halve)."
+  },
+  {
+    "id": "nsaa_2023_q26",
+    "source": "NSAA 2023",
+    "module": "physics",
+    "topic": "energy",
+    "image": "data/images/nsaa_2023_q26.png",
+    "answer": "B",
+    "technique": "Write an energy audit: input = useful + wasted. Efficiency = useful output / input. Power = energy / time. Gravitational PE = mgh."
+  },
+  {
+    "id": "nsaa_2023_q30",
+    "source": "NSAA 2023",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2023_q30.png",
+    "answer": "E",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2023_q31",
+    "source": "NSAA 2023",
+    "module": "physics",
+    "topic": "thermal",
+    "image": "data/images/nsaa_2023_q31.png",
+    "answer": "A",
+    "technique": "For conduction: rate ∝ area × ΔT / length. Poorer conductor has steeper temperature drop. Latent heat required if phase change occurs."
+  },
+  {
+    "id": "nsaa_2023_q32",
+    "source": "NSAA 2023",
+    "module": "physics",
+    "topic": "circuits",
+    "image": "data/images/nsaa_2023_q32.png",
+    "answer": "A",
+    "technique": "Find equivalent resistance first. Series: same current. Parallel: same voltage. Use P=IV, I²R or V²/R depending on which quantities are known."
+  },
+  {
+    "id": "nsaa_2023_q33",
+    "source": "NSAA 2023",
+    "module": "physics",
+    "topic": "waves",
+    "image": "data/images/nsaa_2023_q33.png",
+    "answer": "B",
+    "technique": "Start with v = fλ. Frequency stays constant across a medium boundary. One oscillation = 4A particle travel. Echo/ultrasound path is there and back (halve)."
+  },
+  {
+    "id": "nsaa_2023_q35",
+    "source": "NSAA 2023",
+    "module": "physics",
+    "topic": "nuclear",
+    "image": "data/images/nsaa_2023_q35.png",
+    "answer": "E",
+    "technique": "Make an A/Z ledger. Alpha: -4 mass, -2 proton. Beta minus: mass unchanged, proton +1. Background count must be subtracted before halving for half-life."
+  },
+  {
+    "id": "nsaa_2023_q36",
+    "source": "NSAA 2023",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2023_q36.png",
+    "answer": "D",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2023_q39",
+    "source": "NSAA 2023",
+    "module": "physics",
+    "topic": "thermal",
+    "image": "data/images/nsaa_2023_q39.png",
+    "answer": "C",
+    "technique": "For conduction: rate ∝ area × ΔT / length. Poorer conductor has steeper temperature drop. Latent heat required if phase change occurs."
+  },
+  {
+    "id": "nsaa_2023_q40",
+    "source": "NSAA 2023",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/nsaa_2023_q40.png",
+    "answer": "A",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "nsaa_2023_q5",
+    "source": "NSAA 2023",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2023_q5.png",
+    "answer": "F",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "nsaa_2023_q8",
+    "source": "NSAA 2023",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/nsaa_2023_q8.png",
+    "answer": "E",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "pat_2017_q1",
+    "source": "PAT 2017",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/pat_2017_q1.png",
+    "answer": "",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "pat_2017_q2",
+    "source": "PAT 2017",
+    "module": "physics",
+    "topic": "probability",
+    "image": "data/images/pat_2017_q2.png",
+    "answer": "",
+    "technique": "Use complement for 'at least one'. Use a two-way table for category questions. For without-replacement, reduce numerator and denominator after each draw."
+  },
+  {
+    "id": "pat_2017_q3",
+    "source": "PAT 2017",
+    "module": "physics",
+    "topic": "waves",
+    "image": "data/images/pat_2017_q3.png",
+    "answer": "",
+    "technique": "Start with v = fλ. Frequency stays constant across a medium boundary. One oscillation = 4A particle travel. Echo/ultrasound path is there and back (halve)."
+  },
+  {
+    "id": "pat_2018_q1",
+    "source": "PAT 2018",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/pat_2018_q1.png",
+    "answer": "",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "pat_2018_q2",
+    "source": "PAT 2018",
+    "module": "physics",
+    "topic": "probability",
+    "image": "data/images/pat_2018_q2.png",
+    "answer": "",
+    "technique": "Use complement for 'at least one'. Use a two-way table for category questions. For without-replacement, reduce numerator and denominator after each draw."
+  },
+  {
+    "id": "pat_2019_q1",
+    "source": "PAT 2019",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/pat_2019_q1.png",
+    "answer": "",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "pat_2019_q2",
+    "source": "PAT 2019",
+    "module": "physics",
+    "topic": "probability",
+    "image": "data/images/pat_2019_q2.png",
+    "answer": "",
+    "technique": "Use complement for 'at least one'. Use a two-way table for category questions. For without-replacement, reduce numerator and denominator after each draw."
+  },
+  {
+    "id": "pat_2020_q1",
+    "source": "PAT 2020",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/pat_2020_q1.png",
+    "answer": "",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "pat_2020_q2",
+    "source": "PAT 2020",
+    "module": "physics",
+    "topic": "probability",
+    "image": "data/images/pat_2020_q2.png",
+    "answer": "",
+    "technique": "Use complement for 'at least one'. Use a two-way table for category questions. For without-replacement, reduce numerator and denominator after each draw."
+  },
+  {
+    "id": "pat_2021_q1",
+    "source": "PAT 2021",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/pat_2021_q1.png",
+    "answer": "",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "pat_2021_q2",
+    "source": "PAT 2021",
+    "module": "physics",
+    "topic": "probability",
+    "image": "data/images/pat_2021_q2.png",
+    "answer": "",
+    "technique": "Use complement for 'at least one'. Use a two-way table for category questions. For without-replacement, reduce numerator and denominator after each draw."
+  },
+  {
+    "id": "pat_2022_q1",
+    "source": "PAT 2022",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/pat_2022_q1.png",
+    "answer": "",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "pat_2022_q2",
+    "source": "PAT 2022",
+    "module": "physics",
+    "topic": "probability",
+    "image": "data/images/pat_2022_q2.png",
+    "answer": "",
+    "technique": "Use complement for 'at least one'. Use a two-way table for category questions. For without-replacement, reduce numerator and denominator after each draw."
+  },
+  {
+    "id": "pat_2023_q1",
+    "source": "PAT 2023",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/pat_2023_q1.png",
+    "answer": "",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "pat_2023_q2",
+    "source": "PAT 2023",
+    "module": "physics",
+    "topic": "probability",
+    "image": "data/images/pat_2023_q2.png",
+    "answer": "",
+    "technique": "Use complement for 'at least one'. Use a two-way table for category questions. For without-replacement, reduce numerator and denominator after each draw."
+  },
+  {
+    "id": "pat_specimen_q1",
+    "source": "PAT Specimen",
+    "module": "physics",
+    "topic": "mechanics",
+    "image": "data/images/pat_specimen_q1.png",
+    "answer": "",
+    "technique": "Draw a free-body diagram. Use resultant force, not just applied force. For collisions: momentum first, energy loss second. Use v²=u²+2as when time is absent."
+  },
+  {
+    "id": "pat_specimen_q2",
+    "source": "PAT Specimen",
+    "module": "physics",
+    "topic": "probability",
+    "image": "data/images/pat_specimen_q2.png",
+    "answer": "",
+    "technique": "Use complement for 'at least one'. Use a two-way table for category questions. For without-replacement, reduce numerator and denominator after each draw."
+  },
+  {
+    "id": "tmua_2016_q10",
+    "source": "TMUA 2016",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/tmua_2016_q10.png",
+    "answer": "",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "tmua_2016_q13",
+    "source": "TMUA 2016",
+    "module": "maths",
+    "topic": "geometry",
+    "image": "data/images/tmua_2016_q13.png",
+    "answer": "",
+    "technique": "Redraw diagrams cleanly. Mark right angles, equal lengths, parallel lines and tangents first. Use area formulae before coordinate methods."
+  },
+  {
+    "id": "tmua_2016_q14",
+    "source": "TMUA 2016",
+    "module": "maths",
+    "topic": "graphs",
+    "image": "data/images/tmua_2016_q14.png",
+    "answer": "",
+    "technique": "Identify gradient, area, intercept or asymptote before calculation. For velocity-time: area = displacement, gradient = acceleration."
+  },
+  {
+    "id": "tmua_2016_q4",
+    "source": "TMUA 2016",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/tmua_2016_q4.png",
+    "answer": "",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "tmua_2016_q6",
+    "source": "TMUA 2016",
+    "module": "maths",
+    "topic": "graphs",
+    "image": "data/images/tmua_2016_q6.png",
+    "answer": "",
+    "technique": "Identify gradient, area, intercept or asymptote before calculation. For velocity-time: area = displacement, gradient = acceleration."
+  },
+  {
+    "id": "tmua_2016_q7",
+    "source": "TMUA 2016",
+    "module": "maths",
+    "topic": "graphs",
+    "image": "data/images/tmua_2016_q7.png",
+    "answer": "",
+    "technique": "Identify gradient, area, intercept or asymptote before calculation. For velocity-time: area = displacement, gradient = acceleration."
+  },
+  {
+    "id": "tmua_2016_q8",
+    "source": "TMUA 2016",
+    "module": "maths",
+    "topic": "sequences",
+    "image": "data/images/tmua_2016_q8.png",
+    "answer": "",
+    "technique": "Write first terms and look for telescoping. Use general term and set exponent to target. Sum = n/2(first + last) for arithmetic."
+  },
+  {
+    "id": "tmua_2017_q10",
+    "source": "TMUA 2017",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/tmua_2017_q10.png",
+    "answer": "",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "tmua_2017_q4",
+    "source": "TMUA 2017",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/tmua_2017_q4.png",
+    "answer": "",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "tmua_2017_q6",
+    "source": "TMUA 2017",
+    "module": "maths",
+    "topic": "graphs",
+    "image": "data/images/tmua_2017_q6.png",
+    "answer": "",
+    "technique": "Identify gradient, area, intercept or asymptote before calculation. For velocity-time: area = displacement, gradient = acceleration."
+  },
+  {
+    "id": "tmua_2017_q8",
+    "source": "TMUA 2017",
+    "module": "maths",
+    "topic": "sequences",
+    "image": "data/images/tmua_2017_q8.png",
+    "answer": "",
+    "technique": "Write first terms and look for telescoping. Use general term and set exponent to target. Sum = n/2(first + last) for arithmetic."
+  },
+  {
+    "id": "tmua_2018_q3",
+    "source": "TMUA 2018",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/tmua_2018_q3.png",
+    "answer": "",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "tmua_2018_q5",
+    "source": "TMUA 2018",
+    "module": "maths",
+    "topic": "functions",
+    "image": "data/images/tmua_2018_q5.png",
+    "answer": "",
+    "technique": "Track minimum point and intercepts through any transformation. Use discriminant for tangency or no intersection. Graph first when counting solutions."
+  },
+  {
+    "id": "tmua_2018_q7",
+    "source": "TMUA 2018",
+    "module": "maths",
+    "topic": "graphs",
+    "image": "data/images/tmua_2018_q7.png",
+    "answer": "C",
+    "technique": "Identify gradient, area, intercept or asymptote before calculation. For velocity-time: area = displacement, gradient = acceleration."
+  },
+  {
+    "id": "tmua_2019_q4",
+    "source": "TMUA 2019",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/tmua_2019_q4.png",
+    "answer": "",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "tmua_2019_q6",
+    "source": "TMUA 2019",
+    "module": "maths",
+    "topic": "graphs",
+    "image": "data/images/tmua_2019_q6.png",
+    "answer": "",
+    "technique": "Identify gradient, area, intercept or asymptote before calculation. For velocity-time: area = displacement, gradient = acceleration."
+  },
+  {
+    "id": "tmua_2019_q8",
+    "source": "TMUA 2019",
+    "module": "maths",
+    "topic": "sequences",
+    "image": "data/images/tmua_2019_q8.png",
+    "answer": "A",
+    "technique": "Write first terms and look for telescoping. Use general term and set exponent to target. Sum = n/2(first + last) for arithmetic."
+  },
+  {
+    "id": "tmua_2020_q3",
+    "source": "TMUA 2020",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/tmua_2020_q3.png",
+    "answer": "",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "tmua_2020_q5",
+    "source": "TMUA 2020",
+    "module": "maths",
+    "topic": "functions",
+    "image": "data/images/tmua_2020_q5.png",
+    "answer": "",
+    "technique": "Track minimum point and intercepts through any transformation. Use discriminant for tangency or no intersection. Graph first when counting solutions."
+  },
+  {
+    "id": "tmua_2021_q4",
+    "source": "TMUA 2021",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/tmua_2021_q4.png",
+    "answer": "",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "tmua_2021_q6",
+    "source": "TMUA 2021",
+    "module": "maths",
+    "topic": "graphs",
+    "image": "data/images/tmua_2021_q6.png",
+    "answer": "",
+    "technique": "Identify gradient, area, intercept or asymptote before calculation. For velocity-time: area = displacement, gradient = acceleration."
+  },
+  {
+    "id": "tmua_2021_q8",
+    "source": "TMUA 2021",
+    "module": "maths",
+    "topic": "sequences",
+    "image": "data/images/tmua_2021_q8.png",
+    "answer": "A",
+    "technique": "Write first terms and look for telescoping. Use general term and set exponent to target. Sum = n/2(first + last) for arithmetic."
+  },
+  {
+    "id": "tmua_2022_q3",
+    "source": "TMUA 2022",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/tmua_2022_q3.png",
+    "answer": "",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "tmua_2022_q5",
+    "source": "TMUA 2022",
+    "module": "maths",
+    "topic": "functions",
+    "image": "data/images/tmua_2022_q5.png",
+    "answer": "",
+    "technique": "Track minimum point and intercepts through any transformation. Use discriminant for tangency or no intersection. Graph first when counting solutions."
+  },
+  {
+    "id": "tmua_2023_q12",
+    "source": "TMUA 2023",
+    "module": "maths",
+    "topic": "geometry",
+    "image": "data/images/tmua_2023_q12.png",
+    "answer": "",
+    "technique": "Redraw diagrams cleanly. Mark right angles, equal lengths, parallel lines and tangents first. Use area formulae before coordinate methods."
+  },
+  {
+    "id": "tmua_2023_q14",
+    "source": "TMUA 2023",
+    "module": "maths",
+    "topic": "graphs",
+    "image": "data/images/tmua_2023_q14.png",
+    "answer": "",
+    "technique": "Identify gradient, area, intercept or asymptote before calculation. For velocity-time: area = displacement, gradient = acceleration."
+  },
+  {
+    "id": "tmua_2023_q2",
+    "source": "TMUA 2023",
+    "module": "maths",
+    "topic": "functions",
+    "image": "data/images/tmua_2023_q2.png",
+    "answer": "",
+    "technique": "Track minimum point and intercepts through any transformation. Use discriminant for tangency or no intersection. Graph first when counting solutions."
+  },
+  {
+    "id": "tmua_2023_q5",
+    "source": "TMUA 2023",
+    "module": "maths",
+    "topic": "functions",
+    "image": "data/images/tmua_2023_q5.png",
+    "answer": "",
+    "technique": "Track minimum point and intercepts through any transformation. Use discriminant for tangency or no intersection. Graph first when counting solutions."
+  },
+  {
+    "id": "tmua_2023_q7",
+    "source": "TMUA 2023",
+    "module": "maths",
+    "topic": "graphs",
+    "image": "data/images/tmua_2023_q7.png",
+    "answer": "",
+    "technique": "Identify gradient, area, intercept or asymptote before calculation. For velocity-time: area = displacement, gradient = acceleration."
+  },
+  {
+    "id": "tmua_2023_q8",
+    "source": "TMUA 2023",
+    "module": "maths",
+    "topic": "sequences",
+    "image": "data/images/tmua_2023_q8.png",
+    "answer": "",
+    "technique": "Write first terms and look for telescoping. Use general term and set exponent to target. Sum = n/2(first + last) for arithmetic."
+  },
+  {
+    "id": "tmua_2023_q9",
+    "source": "TMUA 2023",
+    "module": "maths",
+    "topic": "probability",
+    "image": "data/images/tmua_2023_q9.png",
+    "answer": "",
+    "technique": "Use complement for 'at least one'. Use a two-way table for category questions. For without-replacement, reduce numerator and denominator after each draw."
+  },
+  {
+    "id": "tmua_specimen_q4",
+    "source": "TMUA Specimen",
+    "module": "maths",
+    "topic": "algebra",
+    "image": "data/images/tmua_specimen_q4.png",
+    "answer": "",
+    "technique": "Substitute answer options when rearrangement is ugly. Try simple values (x=0, 1, -1) to eliminate symbolic options. Factor before expanding."
+  },
+  {
+    "id": "tmua_specimen_q6",
+    "source": "TMUA Specimen",
+    "module": "maths",
+    "topic": "graphs",
+    "image": "data/images/tmua_specimen_q6.png",
+    "answer": "",
+    "technique": "Identify gradient, area, intercept or asymptote before calculation. For velocity-time: area = displacement, gradient = acceleration."
+  },
+  {
+    "id": "tmua_specimen_q8",
+    "source": "TMUA Specimen",
+    "module": "maths",
+    "topic": "sequences",
+    "image": "data/images/tmua_specimen_q8.png",
+    "answer": "",
+    "technique": "Write first terms and look for telescoping. Use general term and set exponent to target. Sum = n/2(first + last) for arithmetic."
+  }
+]

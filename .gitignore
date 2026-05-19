@@ -1,0 +1,8 @@
+papers/
+scores.csv
+data/progress.json
+__pycache__/
+*.pyc
+*.pyo
+.streamlit/secrets.toml
+.env
