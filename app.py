@@ -583,6 +583,17 @@ with tab4:
                 st.warning(f"Image not found: {q['image']}")
 
         with col_right:
+            # Technique at top
+            toggle_label = "Hide technique ▲" if show_tech else "Show technique ▼"
+            if st.button(toggle_label, key=f"tech_toggle_{idx}", use_container_width=True):
+                st.session_state.show_technique = not show_tech
+                st.rerun()
+            if show_tech:
+                st.markdown(f"**Topic:** {q['topic']}")
+                st.markdown(q.get("technique", "No technique note for this question."))
+
+            st.markdown("---")
+
             # Answer buttons stacked vertically
             st.markdown("**Answer**")
             answer_letters = list("ABCDEFGH")
@@ -623,17 +634,6 @@ with tab4:
                 else:
                     end_quiz()
                 st.rerun()
-
-            st.markdown("---")
-
-            # Technique toggle
-            toggle_label = "Hide technique ▲" if show_tech else "Show technique ▼"
-            if st.button(toggle_label, key=f"tech_toggle_{idx}", use_container_width=True):
-                st.session_state.show_technique = not show_tech
-                st.rerun()
-            if show_tech:
-                st.markdown(f"**Topic:** {q['topic']}")
-                st.markdown(q.get("technique", "No technique note for this question."))
 
     # ── Start screen ───────────────────────────────────────────────────────
     else:
