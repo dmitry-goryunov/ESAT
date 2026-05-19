@@ -406,10 +406,10 @@ def fmt_time(seconds: float) -> str:
     return f"{seconds // 60}:{seconds % 60:02d}"
 
 
-def q_timer_color(remaining: float) -> str:
-    if remaining > 45:
+def q_timer_color(elapsed: float) -> str:
+    if elapsed < 75:
         return "#4caf50"
-    if remaining > 15:
+    if elapsed < 90:
         return "#ff9800"
     return "#f44336"
 
@@ -438,21 +438,31 @@ def init_quiz(questions: list[dict], module_filter: str, include_done: bool, n_q
     else:
         # Fallback: no single paper has enough — pick from the whole pool.
         selected = random.sample(pool, n_questions)
-    total_time = int((n_questions * 1.5 + 1) * 60)
     st.session_state.quiz_active = True
     st.session_state.quiz_questions = selected
     st.session_state.quiz_n_questions = n_questions
-    st.session_state.quiz_total_time = total_time
     st.session_state.quiz_index = 0
     st.session_state.quiz_answers = {}
+    st.session_state.quiz_q_times = {}
     st.session_state.quiz_session_start = time.time()
     st.session_state.quiz_q_start = time.time()
     st.session_state.show_technique = False
     st.session_state.quiz_done = False
-    st.session_state.quiz_submitted = False
+
+
+def record_q_time() -> None:
+    """Accumulate time spent on current question into quiz_q_times."""
+    q_times = st.session_state.get("quiz_q_times", {})
+    idx = st.session_state.quiz_index
+    q = st.session_state.quiz_questions[idx]
+    elapsed = time.time() - st.session_state.quiz_q_start
+    q_times[q["id"]] = q_times.get(q["id"], 0.0) + elapsed
+    st.session_state.quiz_q_times = q_times
+    st.session_state.quiz_q_start = time.time()
 
 
 def end_quiz() -> None:
+    record_q_time()
     questions = st.session_state.quiz_questions
     answers = st.session_state.quiz_answers
     time_used = time.time() - st.session_state.quiz_session_start
@@ -485,8 +495,7 @@ with tab4:
         module_filter = st.radio("Module", ["Both", "Maths", "Physics"], horizontal=True, key="module_filter")
         n_questions = st.number_input("Number of questions", min_value=1, max_value=50,
                                       value=15, step=1, key="n_questions_input")
-        total_mins = round(n_questions * 1.5 + 1, 1)
-        st.caption(f"Total time: **{total_mins} min** · {Q_TIME}s per question")
+        st.caption(f"Target: **1.5 min per question** (timers count only — no enforcement)")
         include_done = st.checkbox("Include already-correct questions", value=False, key="include_done")
 
         progress_data = load_progress()
@@ -529,15 +538,18 @@ with tab4:
             unsafe_allow_html=True,
         )
 
+        q_times = st.session_state.get("quiz_q_times", {})
         st.markdown("**Click any row to review the question, answer, and technique.**")
         for i, q in enumerate(st.session_state.quiz_questions, 1):
             chosen = st.session_state.quiz_answers.get(q["id"], "—")
             correct = q["answer"]
             is_correct = chosen == correct
             result_icon = "✓" if is_correct else "✗"
+            q_secs = q_times.get(q["id"], 0.0)
+            t_color = q_timer_color(q_secs)
             label = (
                 f"{result_icon} Q{i} · {q['source']} · {q['topic'].capitalize()} "
-                f"· Your answer: **{chosen}** · Correct: **{correct}**"
+                f"· Your answer: **{chosen}** · Correct: **{correct}** · {fmt_time(q_secs)}"
             )
             with st.expander(label, expanded=False):
                 ecol_img, ecol_info = st.columns([3, 1])
@@ -553,7 +565,9 @@ with tab4:
                         f"<p style='font-size:15px'>Your answer: "
                         f"<b style='color:{ans_color}'>{chosen}</b></p>"
                         f"<p style='font-size:15px'>Correct: "
-                        f"<b style='color:#4caf50'>{correct}</b></p>",
+                        f"<b style='color:#4caf50'>{correct}</b></p>"
+                        f"<p style='font-size:15px'>Time: "
+                        f"<b style='color:{t_color}'>{fmt_time(q_secs)}</b></p>",
                         unsafe_allow_html=True,
                     )
                     st.markdown("---")
@@ -563,8 +577,8 @@ with tab4:
         st.markdown("")
         if st.button("Start new quiz", type="primary"):
             for key in ["quiz_active", "quiz_done", "quiz_questions", "quiz_index",
-                        "quiz_answers", "quiz_session_start", "quiz_q_start",
-                        "show_technique", "quiz_submitted"]:
+                        "quiz_answers", "quiz_q_times", "quiz_session_start", "quiz_q_start",
+                        "show_technique"]:
                 st.session_state.pop(key, None)
             st.rerun()
 
@@ -576,37 +590,19 @@ with tab4:
         now = time.time()
         total_elapsed = now - st.session_state.quiz_session_start
         n_q = st.session_state.get("quiz_n_questions", 15)
-        total_time = st.session_state.get("quiz_total_time", int((n_q * 1.5 + 1) * 60))
-        total_remaining = total_time - total_elapsed
-
-        if total_remaining <= 0:
-            end_quiz()
-            st.rerun()
 
         idx = st.session_state.quiz_index
         q = st.session_state.quiz_questions[idx]
 
-        q_elapsed = now - st.session_state.quiz_q_start
-        q_remaining = Q_TIME - q_elapsed
+        # Time on this question = previously accumulated + current stint
+        q_accum = st.session_state.get("quiz_q_times", {}).get(q["id"], 0.0)
+        q_elapsed = q_accum + (now - st.session_state.quiz_q_start)
 
-        if q_remaining <= 0 and not st.session_state.get("quiz_submitted"):
-            # Auto-advance: record no answer if not already set
-            if q["id"] not in st.session_state.quiz_answers:
-                st.session_state.quiz_answers[q["id"]] = ""
-            if idx + 1 < n_q:
-                st.session_state.quiz_index += 1
-                st.session_state.quiz_q_start = time.time()
-                st.session_state.show_technique = False
-            else:
-                end_quiz()
-            st.rerun()
-
-        # Header row: total timer + progress
+        # Header row: total elapsed | progress | question elapsed
         hcol1, hcol2, hcol3 = st.columns([3, 2, 1])
         with hcol1:
-            t_color = q_timer_color(total_remaining)
             st.markdown(
-                f"<span style='font-size:18px;color:{t_color}'>⏱ Total: <b>{fmt_time(total_remaining)}</b></span>",
+                f"<span style='font-size:18px;color:#aaa'>⏱ Total: <b>{fmt_time(total_elapsed)}</b></span>",
                 unsafe_allow_html=True,
             )
         with hcol2:
@@ -615,9 +611,9 @@ with tab4:
                 unsafe_allow_html=True,
             )
         with hcol3:
-            q_color = q_timer_color(q_remaining)
+            q_color = q_timer_color(q_elapsed)
             st.markdown(
-                f"<span style='font-size:16px;color:{q_color}'><b>{fmt_time(q_remaining)}</b></span>",
+                f"<span style='font-size:16px;color:{q_color}'><b>{fmt_time(q_elapsed)}</b></span>",
                 unsafe_allow_html=True,
             )
 
@@ -667,16 +663,16 @@ with tab4:
             # Navigation
             if idx > 0:
                 if st.button("← Back", use_container_width=True):
+                    record_q_time()
                     st.session_state.quiz_index -= 1
-                    st.session_state.quiz_q_start = time.time()
                     st.session_state.show_technique = False
                     st.rerun()
             if st.button("⏭ Skip", use_container_width=True):
                 if q["id"] not in st.session_state.quiz_answers:
                     st.session_state.quiz_answers[q["id"]] = ""
+                record_q_time()
                 if idx + 1 < n_q:
                     st.session_state.quiz_index += 1
-                    st.session_state.quiz_q_start = time.time()
                     st.session_state.show_technique = False
                 else:
                     end_quiz()
@@ -686,8 +682,8 @@ with tab4:
                 if q["id"] not in st.session_state.quiz_answers:
                     st.session_state.quiz_answers[q["id"]] = ""
                 if idx + 1 < n_q:
+                    record_q_time()
                     st.session_state.quiz_index += 1
-                    st.session_state.quiz_q_start = time.time()
                     st.session_state.show_technique = False
                 else:
                     end_quiz()
