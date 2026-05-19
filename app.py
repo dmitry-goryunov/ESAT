@@ -571,72 +571,69 @@ with tab4:
         # Source tag
         st.caption(f"**{q['source']}** · {q['module'].capitalize()} · {q['topic']}")
 
-        # Main layout: question | technique
+        # Main layout: image left | answers + technique right
         show_tech = st.session_state.get("show_technique", False)
-        col_q, col_t = st.columns([2, 1]) if show_tech else (st.container(), None)
+        col_img, col_right = st.columns([3, 1])
 
-        with (col_q if show_tech else col_q):
+        with col_img:
             img_path = ROOT / q["image"]
             if img_path.exists():
                 st.image(str(img_path), width=600)
             else:
                 st.warning(f"Image not found: {q['image']}")
 
-            # Answer buttons
+        with col_right:
+            # Answer buttons stacked vertically
+            st.markdown("**Answer**")
             answer_letters = list("ABCDEFGH")
             chosen = st.session_state.quiz_answers.get(q["id"])
-            btn_cols = st.columns(len(answer_letters))
-            for i, letter in enumerate(answer_letters):
-                with btn_cols[i]:
-                    label = f"**{letter}**" if chosen == letter else letter
-                    if st.button(label, key=f"ans_{idx}_{letter}", use_container_width=True):
-                        st.session_state.quiz_answers[q["id"]] = letter
+            for letter in answer_letters:
+                btn_type = "primary" if chosen == letter else "secondary"
+                if st.button(letter, key=f"ans_{idx}_{letter}",
+                             use_container_width=True, type=btn_type):
+                    st.session_state.quiz_answers[q["id"]] = letter
 
-            # Navigation row
-            nav1, nav2, nav3 = st.columns([1, 1, 1])
-            with nav1:
-                if idx > 0:
-                    if st.button("← Back", use_container_width=True):
-                        st.session_state.quiz_index -= 1
-                        st.session_state.quiz_q_start = time.time()
-                        st.session_state.show_technique = False
-                        st.rerun()
-            with nav2:
-                if st.button("⏭ Skip", use_container_width=True):
-                    if q["id"] not in st.session_state.quiz_answers:
-                        st.session_state.quiz_answers[q["id"]] = ""
-                    if idx + 1 < N_QUESTIONS:
-                        st.session_state.quiz_index += 1
-                        st.session_state.quiz_q_start = time.time()
-                        st.session_state.show_technique = False
-                    else:
-                        end_quiz()
-                    st.rerun()
-            with nav3:
-                next_label = "Finish quiz" if idx + 1 == N_QUESTIONS else "Next →"
-                if st.button(next_label, type="primary", use_container_width=True):
-                    if q["id"] not in st.session_state.quiz_answers:
-                        st.session_state.quiz_answers[q["id"]] = ""
-                    if idx + 1 < N_QUESTIONS:
-                        st.session_state.quiz_index += 1
-                        st.session_state.quiz_q_start = time.time()
-                        st.session_state.show_technique = False
-                    else:
-                        end_quiz()
-                    st.rerun()
+            st.markdown("---")
 
-        if show_tech and col_t is not None:
-            with col_t:
-                st.markdown("##### Technique")
+            # Navigation
+            if idx > 0:
+                if st.button("← Back", use_container_width=True):
+                    st.session_state.quiz_index -= 1
+                    st.session_state.quiz_q_start = time.time()
+                    st.session_state.show_technique = False
+                    st.rerun()
+            if st.button("⏭ Skip", use_container_width=True):
+                if q["id"] not in st.session_state.quiz_answers:
+                    st.session_state.quiz_answers[q["id"]] = ""
+                if idx + 1 < N_QUESTIONS:
+                    st.session_state.quiz_index += 1
+                    st.session_state.quiz_q_start = time.time()
+                    st.session_state.show_technique = False
+                else:
+                    end_quiz()
+                st.rerun()
+            next_label = "Finish" if idx + 1 == N_QUESTIONS else "Next →"
+            if st.button(next_label, type="primary", use_container_width=True):
+                if q["id"] not in st.session_state.quiz_answers:
+                    st.session_state.quiz_answers[q["id"]] = ""
+                if idx + 1 < N_QUESTIONS:
+                    st.session_state.quiz_index += 1
+                    st.session_state.quiz_q_start = time.time()
+                    st.session_state.show_technique = False
+                else:
+                    end_quiz()
+                st.rerun()
+
+            st.markdown("---")
+
+            # Technique toggle
+            toggle_label = "Hide technique ▲" if show_tech else "Show technique ▼"
+            if st.button(toggle_label, key=f"tech_toggle_{idx}", use_container_width=True):
+                st.session_state.show_technique = not show_tech
+                st.rerun()
+            if show_tech:
                 st.markdown(f"**Topic:** {q['topic']}")
-                st.markdown("---")
                 st.markdown(q.get("technique", "No technique note for this question."))
-
-        # Technique toggle below
-        toggle_label = "Hide technique ▲" if show_tech else "Show technique ▼"
-        if st.button(toggle_label, key=f"tech_toggle_{idx}"):
-            st.session_state.show_technique = not show_tech
-            st.rerun()
 
     # ── Start screen ───────────────────────────────────────────────────────
     else:
