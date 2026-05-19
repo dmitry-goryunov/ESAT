@@ -525,9 +525,9 @@ def get_topic_and_technique(qid: str, module: str) -> tuple[str, str]:
 # ---------------------------------------------------------------------------
 
 def parse_answer_key(pdf_path: Path) -> dict[int, str]:
-    """Parse a question-answer PDF and return {q_num: answer_letter}.
+    """Parse NSAA/ENGAA answer-key PDF. Returns {q_num: answer_letter}.
 
-    Handles three formats seen across years:
+    Handles three formats:
       1. Two-column numeric:   "1 G  46 A"  (NSAA/ENGAA 2016-2018)
       2. Single-column numeric: "1 F\n2 H"   (NSAA 2019-2020)
       3. Q-prefixed:           "Q1 E MATH"  (NSAA/ENGAA 2021+)
@@ -550,6 +550,71 @@ def parse_answer_key(pdf_path: Path) -> dict[int, str]:
     return answers
 
 
+# Patterns for TMUA prose-format worked answers
+_TMUA_QH = re.compile(r"Question\s*(\d+)", re.IGNORECASE)
+_TMUA_ANS = re.compile(
+    r"(?:"
+    r"the\s*correct\s*answer\s*is\s*(?:(?:therefore|option)\s*)?"
+    r"|the\s*correct\s*option\s*is\s*"
+    r"|which\s*is\s*option\s*"
+    r"|the\s*answer\s*is\s*(?:option\s*)?"
+    r"|answer\s+is\s+(?:option\s+)?"
+    r"|answer\s+as\s+option\s+"
+    r"|this\s+is\s+option\s+"
+    r"|giving\s+option\s+"
+    r"|offered\s+option\s+is\s+"
+    r")([A-H])",
+    re.IGNORECASE,
+)
+_TMUA_FALLBACK = re.compile(r"\boption\s+([A-H])\b", re.IGNORECASE)
+
+
+def _tmua_is_toc(text: str) -> bool:
+    return len(_TMUA_QH.findall(text)) > 3
+
+
+def _tmua_extract_answer(text: str) -> str:
+    ms = _TMUA_ANS.findall(text)
+    if ms:
+        return ms[-1].upper()
+    ms2 = _TMUA_FALLBACK.findall(text[-300:])
+    if ms2:
+        return ms2[-1].upper()
+    return ""
+
+
+def parse_tmua_answer_key(pdf_path: Path) -> dict[int, str]:
+    """Parse a TMUA worked-answer PDF where answers appear in prose.
+
+    Each page starts with 'Question N'; some questions span multiple pages.
+    The correct answer appears in phrases like 'the answer is F', 'this is option C'.
+    """
+    answers: dict[int, str] = {}
+    try:
+        with pdfplumber.open(str(pdf_path)) as p:
+            current_q: int | None = None
+            acc = ""
+            for page in p.pages:
+                txt = page.extract_text() or ""
+                q_match = _TMUA_QH.search(txt[:300]) if not _tmua_is_toc(txt) else None
+                if q_match:
+                    if current_q and current_q not in answers:
+                        a = _tmua_extract_answer(acc)
+                        if a:
+                            answers[current_q] = a
+                    current_q = int(q_match.group(1))
+                    acc = txt
+                else:
+                    acc += "\n" + txt
+            if current_q and current_q not in answers:
+                a = _tmua_extract_answer(acc)
+                if a:
+                    answers[current_q] = a
+    except Exception as e:
+        print(f"  WARNING: could not parse {pdf_path.name}: {e}")
+    return answers
+
+
 def load_all_answer_keys() -> dict[str, dict[int, str]]:
     keys = {}
 
@@ -567,12 +632,12 @@ def load_all_answer_keys() -> dict[str, dict[int, str]]:
 
     for year in range(2016, 2024):
         path = ROOT / f"papers/tmua/TMUA-{year}-paper-1-worked-answers.pdf"
-        k = parse_answer_key(path)
+        k = parse_tmua_answer_key(path)
         if k:
             keys[f"tmua_{year}"] = k
 
     path = ROOT / "papers/tmua/TMUA-early-specimen-paper-1-worked-answers.pdf"
-    k = parse_answer_key(path)
+    k = parse_tmua_answer_key(path)
     if k:
         keys["tmua_specimen"] = k
 
