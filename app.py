@@ -355,9 +355,7 @@ DATA_FILE = ROOT / "data" / "questions.json"
 PROGRESS_FILE = ROOT / "data" / "progress.json"
 SCORES_FILE = ROOT / "scores.csv"
 
-Q_TIME = 90    # seconds per question (1.5 min)
-TOTAL_TIME = 1500  # 25 minutes total (1.5 min × 15 Q)
-N_QUESTIONS = 15
+Q_TIME = 90  # seconds per question (1.5 min)
 
 
 def load_questions() -> list[dict]:
@@ -384,14 +382,15 @@ def log_score(n_correct: int, time_used: float) -> None:
     import csv
     headers = ["date", "source", "questions_attempted", "correct",
                "time_minutes", "score_percent", "seconds_per_question"]
+    n_q = st.session_state.get("quiz_n_questions", 15)
     row = {
         "date": str(date.today()),
         "source": "Quiz — mixed",
-        "questions_attempted": N_QUESTIONS,
+        "questions_attempted": n_q,
         "correct": n_correct,
         "time_minutes": round(time_used / 60, 1),
-        "score_percent": round(n_correct / N_QUESTIONS * 100, 1),
-        "seconds_per_question": round(time_used / N_QUESTIONS, 1),
+        "score_percent": round(n_correct / n_q * 100, 1),
+        "seconds_per_question": round(time_used / n_q, 1),
     }
     exists = SCORES_FILE.exists()
     with SCORES_FILE.open("a", newline="", encoding="utf-8") as fh:
@@ -414,19 +413,22 @@ def q_timer_color(remaining: float) -> str:
     return "#f44336"
 
 
-def init_quiz(questions: list[dict], module_filter: str, include_done: bool) -> None:
+def init_quiz(questions: list[dict], module_filter: str, include_done: bool, n_questions: int) -> None:
     progress = load_progress()
     done_ids = set(progress.get("completed_correct", []))
     pool = [q for q in questions if module_filter == "Both" or q["module"] == module_filter.lower()]
     if not include_done:
         pool = [q for q in pool if q["id"] not in done_ids]
-    if len(pool) < N_QUESTIONS:
-        st.error(f"Not enough questions available ({len(pool)} found, need {N_QUESTIONS}). "
+    if len(pool) < n_questions:
+        st.error(f"Not enough questions available ({len(pool)} found, need {n_questions}). "
                  "Enable 'Include already-correct questions' or choose a different module.")
         return
-    selected = random.sample(pool, N_QUESTIONS)
+    selected = random.sample(pool, n_questions)
+    total_time = int((n_questions * 1.5 + 1) * 60)
     st.session_state.quiz_active = True
     st.session_state.quiz_questions = selected
+    st.session_state.quiz_n_questions = n_questions
+    st.session_state.quiz_total_time = total_time
     st.session_state.quiz_index = 0
     st.session_state.quiz_answers = {}
     st.session_state.quiz_session_start = time.time()
@@ -467,6 +469,10 @@ with tab4:
     # ── Sidebar-style controls in an expander ─────────────────────────────
     with st.expander("Quiz settings", expanded=not st.session_state.get("quiz_active", False)):
         module_filter = st.radio("Module", ["Both", "Maths", "Physics"], horizontal=True, key="module_filter")
+        n_questions = st.number_input("Number of questions", min_value=1, max_value=50,
+                                      value=15, step=1, key="n_questions_input")
+        total_mins = round(n_questions * 1.5 + 1, 1)
+        st.caption(f"Total time: **{total_mins} min** · {Q_TIME}s per question")
         include_done = st.checkbox("Include already-correct questions", value=False, key="include_done")
 
         progress_data = load_progress()
@@ -476,7 +482,7 @@ with tab4:
         col_a, col_b = st.columns(2)
         with col_a:
             if st.button("Start quiz", type="primary", use_container_width=True):
-                init_quiz(all_questions, module_filter, include_done)
+                init_quiz(all_questions, module_filter, include_done, int(n_questions))
                 st.rerun()
         with col_b:
             if st.button("Reset progress", use_container_width=True):
@@ -488,11 +494,12 @@ with tab4:
     if st.session_state.get("quiz_done"):
         n_correct = st.session_state.quiz_n_correct
         time_used = st.session_state.quiz_time_used
-        pct = round(n_correct / N_QUESTIONS * 100)
+        n_q = st.session_state.get("quiz_n_questions", 15)
+        pct = round(n_correct / n_q * 100)
         color = "#4caf50" if pct >= 70 else "#ff9800" if pct >= 50 else "#f44336"
 
         st.markdown(
-            f"<h2 style='color:{color}'>Quiz complete — {n_correct}/{N_QUESTIONS} correct ({pct}%)</h2>"
+            f"<h2 style='color:{color}'>Quiz complete — {n_correct}/{n_q} correct ({pct}%)</h2>"
             f"<p>Time used: {fmt_time(time_used)}</p>",
             unsafe_allow_html=True,
         )
@@ -522,7 +529,9 @@ with tab4:
 
         now = time.time()
         total_elapsed = now - st.session_state.quiz_session_start
-        total_remaining = TOTAL_TIME - total_elapsed
+        n_q = st.session_state.get("quiz_n_questions", 15)
+        total_time = st.session_state.get("quiz_total_time", int((n_q * 1.5 + 1) * 60))
+        total_remaining = total_time - total_elapsed
 
         if total_remaining <= 0:
             end_quiz()
@@ -538,7 +547,7 @@ with tab4:
             # Auto-advance: record no answer if not already set
             if q["id"] not in st.session_state.quiz_answers:
                 st.session_state.quiz_answers[q["id"]] = ""
-            if idx + 1 < N_QUESTIONS:
+            if idx + 1 < n_q:
                 st.session_state.quiz_index += 1
                 st.session_state.quiz_q_start = time.time()
                 st.session_state.show_technique = False
@@ -556,7 +565,7 @@ with tab4:
             )
         with hcol2:
             st.markdown(
-                f"<span style='font-size:16px;color:#aaa'>Q {idx + 1} / {N_QUESTIONS}</span>",
+                f"<span style='font-size:16px;color:#aaa'>Q {idx + 1} / {n_q}</span>",
                 unsafe_allow_html=True,
             )
         with hcol3:
@@ -616,18 +625,18 @@ with tab4:
             if st.button("⏭ Skip", use_container_width=True):
                 if q["id"] not in st.session_state.quiz_answers:
                     st.session_state.quiz_answers[q["id"]] = ""
-                if idx + 1 < N_QUESTIONS:
+                if idx + 1 < n_q:
                     st.session_state.quiz_index += 1
                     st.session_state.quiz_q_start = time.time()
                     st.session_state.show_technique = False
                 else:
                     end_quiz()
                 st.rerun()
-            next_label = "Finish" if idx + 1 == N_QUESTIONS else "Next →"
+            next_label = "Finish" if idx + 1 == n_q else "Next →"
             if st.button(next_label, type="primary", use_container_width=True):
                 if q["id"] not in st.session_state.quiz_answers:
                     st.session_state.quiz_answers[q["id"]] = ""
-                if idx + 1 < N_QUESTIONS:
+                if idx + 1 < n_q:
                     st.session_state.quiz_index += 1
                     st.session_state.quiz_q_start = time.time()
                     st.session_state.show_technique = False
