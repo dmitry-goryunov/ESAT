@@ -355,8 +355,8 @@ DATA_FILE = ROOT / "data" / "questions.json"
 PROGRESS_FILE = ROOT / "data" / "progress.json"
 SCORES_FILE = ROOT / "scores.csv"
 
-Q_TIME = 90   # seconds per question
-TOTAL_TIME = 900  # 15 minutes total
+Q_TIME = 90    # seconds per question (1.5 min)
+TOTAL_TIME = 1500  # 25 minutes total (1.5 min × 15 Q)
 N_QUESTIONS = 15
 
 
@@ -645,7 +645,7 @@ with tab4:
         steps = [
             ("1", "Choose module", "Maths, Physics, or Both"),
             ("2", "15 questions", "Randomly drawn from NSAA, ENGAA, TMUA, PAT"),
-            ("3", "1.5 min / question", "15-minute total · ESAT pace"),
+            ("3", "1.5 min / question", "25-minute total · ESAT pace"),
             ("4", "Score + log", "Correct questions removed from active pool"),
         ]
         for col, (num, title, desc) in zip(cols, steps):
