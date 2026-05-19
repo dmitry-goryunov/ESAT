@@ -15,9 +15,12 @@ Page finding (NSAA / ENGAA):
   NSAA: include PART A (Mathematics) and PART B (Physics) — exclude Chemistry, Biology, etc.
   ENGAA: include PART A (Mathematics and Physics) only — exclude PART B (Advanced).
 
-TMUA page layout (verified by inspection):
-  2016 + specimen: 2 questions per page, Q1/Q2 at index 2 → page_idx = (qnum-1)//2 + 2
-  2017-2023:       1 question per page,  Q1 at index 2    → page_idx = qnum + 1
+TMUA page layout (verified by visual inspection of rendered pages):
+  2016: mostly 2 questions per page, but Q11 and Q12 each take a full page (diagrams),
+        Q19 and Q20 each take a full page. Hardcoded per-question mapping.
+  specimen: mostly 2 questions per page, but Q7 takes a full page,
+            Q20 takes a full page. Hardcoded per-question mapping.
+  2017-2023: 1 question per page, Q1 at index 2 → page_idx = qnum + 1
 
 Sources included:
   NSAA 2016-2023  — Maths (Part A) + Physics (Part B) only
@@ -125,10 +128,18 @@ def generate_manifest() -> list[tuple[str, str, int]]:
         for q in sorted(q_pages):
             entries.append((f"engaa_{year}_q{q}", rel_pdf, q_pages[q]))
 
-    # ── TMUA 2016: 2 questions per page, Q1+Q2 share index 2 ────────────────
+    # ── TMUA 2016: irregular layout — Q11, Q12, Q19, Q20 each solo ──────────
+    # Verified by rendering every page. Q1+Q2 share index 2; Q11 alone at 7
+    # (diagram), Q12 alone at 8 (diagram), then pairs resume; Q19 and Q20 solo.
+    _2016_pages = {
+        1: 2, 2: 2, 3: 3, 4: 3, 5: 4, 6: 4, 7: 5, 8: 5, 9: 6, 10: 6,
+        11: 7, 12: 8,
+        13: 9, 14: 9, 15: 10, 16: 10, 17: 11, 18: 11,
+        19: 12, 20: 13,
+    }
     rel_pdf_2016 = "papers/tmua/TMUA-2016-paper-1.pdf"
     for q in range(1, 21):
-        entries.append((f"tmua_2016_q{q}", rel_pdf_2016, (q - 1) // 2 + 2))
+        entries.append((f"tmua_2016_q{q}", rel_pdf_2016, _2016_pages[q]))
 
     # ── TMUA 2017-2023: 1 question per page, Q1 at index 2 ──────────────────
     for year in range(2017, 2024):
@@ -136,12 +147,20 @@ def generate_manifest() -> list[tuple[str, str, int]]:
         for q in range(1, 21):
             entries.append((f"tmua_{year}_q{q}", rel_pdf, q + 1))
 
-    # ── TMUA specimen: 2 questions per page, Q1+Q2 share index 2 ────────────
+    # ── TMUA specimen: irregular layout — Q7 and Q20 each solo ───────────────
+    # Verified by rendering every page. Q1+Q2 share index 2; Q7 alone at 5;
+    # pairs resume Q8+Q9 at 6; Q20 alone at 12.
+    _spec_pages = {
+        1: 2, 2: 2, 3: 3, 4: 3, 5: 4, 6: 4, 7: 5,
+        8: 6, 9: 6, 10: 7, 11: 7, 12: 8, 13: 8,
+        14: 9, 15: 9, 16: 10, 17: 10, 18: 11, 19: 11,
+        20: 12,
+    }
     for q in range(1, 21):
         entries.append((
             f"tmua_specimen_q{q}",
             "papers/tmua/TMUA-early-specimen-paper-1.pdf",
-            (q - 1) // 2 + 2,
+            _spec_pages[q],
         ))
 
     return entries
