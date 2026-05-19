@@ -578,7 +578,7 @@ with tab4:
         with (col_q if show_tech else col_q):
             img_path = ROOT / q["image"]
             if img_path.exists():
-                st.image(str(img_path), use_container_width=True)
+                st.image(str(img_path), width=600)
             else:
                 st.warning(f"Image not found: {q['image']}")
 
