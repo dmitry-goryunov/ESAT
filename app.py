@@ -544,7 +544,7 @@ with tab4:
                 with ecol_img:
                     img_path = ROOT / q["image"]
                     if img_path.exists():
-                        st.image(str(img_path), width=600)
+                        st.image(str(img_path), width=st.session_state.get("img_zoom", 600))
                     else:
                         st.warning(f"Image not found: {q['image']}")
                 with ecol_info:
@@ -631,9 +631,12 @@ with tab4:
         col_img, col_right = st.columns([3, 1])
 
         with col_img:
+            img_zoom = st.slider("Zoom", 300, 1200, st.session_state.get("img_zoom", 600),
+                                 step=50, key=f"zoom_{idx}", label_visibility="collapsed")
+            st.session_state["img_zoom"] = img_zoom
             img_path = ROOT / q["image"]
             if img_path.exists():
-                st.image(str(img_path), width=600)
+                st.image(str(img_path), width=img_zoom)
             else:
                 st.warning(f"Image not found: {q['image']}")
 
