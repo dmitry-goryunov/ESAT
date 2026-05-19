@@ -181,6 +181,30 @@ Mistake categories:
 - stamina/fatigue
 - method selection
 
+## Quiz app standards
+
+The Streamlit quiz should support three modes:
+- Timed test: no technique shown until review
+- Drill: technique may be shown during practice
+- Weak-topic repair: prioritise topics from attempt history and error log
+
+Every quiz attempt should track:
+- chosen answer
+- confidence: confident, unsure or guess
+- skipped status
+- time per question
+- raw score
+- adjusted score excluding lucky correct guesses
+- slow questions needing review
+
+Only confident, correct and not-slow answers should be marked as mastered.
+
+Missed, skipped, lucky-correct and slow questions should be exported or copied into `error_log.md`.
+
+`data/attempts.jsonl` stores per-question quiz history.
+`data/progress.json` stores mastered-question progress only.
+`scores.csv` stores quiz/session score summaries.
+
 ## Output standards
 
 Use concise markdown, tables and explicit metrics.

@@ -1,5 +1,29 @@
 # Changelog
 
+## 2026-05-19 - Quiz workflow upgrade
+
+Upgraded the Streamlit quiz workflow.
+
+Changed:
+- added timed test, drill and weak-topic repair modes
+- added ESAT area, source, year and topic filters
+- added 15-question, 27-question and 40-minute timing presets
+- added confidence marking for confident, unsure and guessed answers
+- added adjusted scoring so lucky correct answers do not count as mastered
+- added skipped, guessed, lucky-correct and slow-question metrics
+- added persistent per-question attempt history in `data/attempts.jsonl`
+- added one-click export of missed, lucky, skipped and slow questions to `error_log.md`
+- added keyboard shortcuts for answer selection, skip, next and back
+- fixed quiz-start error handling so failed starts no longer immediately rerun
+- fixed final-question skip timing so the last question is not double-counted
+- added `scripts/validate_question_bank.py` to report missing answers, missing images, gaps and answer distribution
+- corrected the quiz database message so it reports usable question count instead of claiming complete coverage
+
+Rationale:
+- the quiz now matches the project rules for speed, strategic skipping, adjusted scores and immediate diagnostic review
+
+---
+
 ## 2026-05-19 - Added technique.md
 
 Added `technique.md` with deployable quick-win techniques: answer substitution, dimensional elimination, limiting cases, ratio and proportionality, graph shape recognition, order-of-magnitude checks, pacing rules, trap patterns, and session habits.
