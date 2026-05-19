@@ -13,7 +13,7 @@ st.set_page_config(page_title="ESAT Prep Dashboard", layout="wide")
 st.title("ESAT Preparation Dashboard")
 st.caption("Maths 1 · Maths 2 · Physics — Oxbridge / Imperial target")
 
-tab1, tab2, tab3, tab4 = st.tabs(["📅 12-Week Schedule", "📚 Papers Timetable", "📊 Paper Comparison", "🎯 Quiz"])
+tab4, tab1, tab2, tab3 = st.tabs(["🎯 Quiz", "📅 12-Week Schedule", "📚 Papers Timetable", "📊 Paper Comparison"])
 
 # ─────────────────────────────────────────────
 # TAB 1 — 12-WEEK SCHEDULE
