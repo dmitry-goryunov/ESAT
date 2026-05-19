@@ -1,6 +1,7 @@
 import json
 import random
 import time
+from collections import defaultdict
 from datetime import date
 from pathlib import Path
 
@@ -423,7 +424,20 @@ def init_quiz(questions: list[dict], module_filter: str, include_done: bool, n_q
         st.error(f"Not enough questions available ({len(pool)} found, need {n_questions}). "
                  "Enable 'Include already-correct questions' or choose a different module.")
         return
-    selected = random.sample(pool, n_questions)
+
+    # Group by paper (e.g. "nsaa_2022", "tmua_2018") and pick one paper.
+    by_paper: dict[str, list[dict]] = defaultdict(list)
+    for q in pool:
+        parts = q["id"].split("_")
+        paper_key = "_".join(parts[:2])  # e.g. nsaa_2022, tmua_specimen
+        by_paper[paper_key].append(q)
+    eligible_papers = [k for k, qs in by_paper.items() if len(qs) >= n_questions]
+    if eligible_papers:
+        chosen_paper = random.choice(eligible_papers)
+        selected = random.sample(by_paper[chosen_paper], n_questions)
+    else:
+        # Fallback: no single paper has enough — pick from the whole pool.
+        selected = random.sample(pool, n_questions)
     total_time = int((n_questions * 1.5 + 1) * 60)
     st.session_state.quiz_active = True
     st.session_state.quiz_questions = selected
