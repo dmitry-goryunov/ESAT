@@ -479,16 +479,27 @@ with tab4:
         done_count = len(progress_data.get("completed_correct", []))
         st.caption(f"{done_count} questions marked correct so far · {len(all_questions)} total available")
 
-        col_a, col_b = st.columns(2)
+        col_a, col_b = st.columns([3, 1])
         with col_a:
             if st.button("Start quiz", type="primary", use_container_width=True):
                 init_quiz(all_questions, module_filter, include_done, int(n_questions))
                 st.rerun()
         with col_b:
-            if st.button("Reset progress", use_container_width=True):
-                save_progress({"completed_correct": []})
-                st.success("Progress reset.")
-                st.rerun()
+            if st.button("Reset", use_container_width=True):
+                st.session_state["confirm_reset"] = True
+
+        if st.session_state.get("confirm_reset"):
+            st.warning("This will clear all progress. Are you sure?")
+            c1, c2 = st.columns(2)
+            with c1:
+                if st.button("Yes, reset", type="primary", use_container_width=True):
+                    save_progress({"completed_correct": []})
+                    st.session_state.pop("confirm_reset", None)
+                    st.rerun()
+            with c2:
+                if st.button("Cancel", use_container_width=True):
+                    st.session_state.pop("confirm_reset", None)
+                    st.rerun()
 
     # ── Quiz done screen ───────────────────────────────────────────────────
     if st.session_state.get("quiz_done"):
