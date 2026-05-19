@@ -671,8 +671,8 @@ with tab4:
         cols = st.columns(4)
         steps = [
             ("1", "Choose module", "Maths, Physics, or Both"),
-            ("2", "15 questions", "Randomly drawn from NSAA, ENGAA, TMUA, PAT"),
-            ("3", "1.5 min / question", "25-minute total · ESAT pace"),
+            ("2", "Set question count", "Randomly drawn from NSAA, ENGAA, TMUA"),
+            ("3", "1.5 min / question", "Timer auto-calculated · ESAT pace"),
             ("4", "Score + log", "Correct questions removed from active pool"),
         ]
         for col, (num, title, desc) in zip(cols, steps):
@@ -685,4 +685,4 @@ with tab4:
                     unsafe_allow_html=True,
                 )
         st.markdown("")
-        st.info(f"Database: **{len(all_questions)} questions** with answers · NSAA 2016–2023, ENGAA 2016–2023, TMUA, PAT")
+        st.info(f"Database: **{len(all_questions)} questions** with answers · NSAA 2016–2023 (full) · ENGAA 2016–2023 Part A (full) · TMUA selected")
