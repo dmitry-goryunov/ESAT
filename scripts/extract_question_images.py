@@ -15,7 +15,9 @@ Page finding (NSAA / ENGAA):
   NSAA: include PART A (Mathematics) and PART B (Physics) — exclude Chemistry, Biology, etc.
   ENGAA: include PART A (Mathematics and Physics) only — exclude PART B (Advanced).
 
-TMUA all years: page_idx = qnum - 1  (no cover page, formula verified).
+TMUA page layout (verified by inspection):
+  2016 + specimen: 2 questions per page, Q1/Q2 at index 2 → page_idx = (qnum-1)//2 + 2
+  2017-2023:       1 question per page,  Q1 at index 2    → page_idx = qnum + 1
 
 Sources included:
   NSAA 2016-2023  — Maths (Part A) + Physics (Part B) only
@@ -123,18 +125,23 @@ def generate_manifest() -> list[tuple[str, str, int]]:
         for q in sorted(q_pages):
             entries.append((f"engaa_{year}_q{q}", rel_pdf, q_pages[q]))
 
-    # ── TMUA 2016-2023: all 20 questions, page_idx = qnum - 1 ───────────────
-    for year in range(2016, 2024):
+    # ── TMUA 2016: 2 questions per page, Q1+Q2 share index 2 ────────────────
+    rel_pdf_2016 = "papers/tmua/TMUA-2016-paper-1.pdf"
+    for q in range(1, 21):
+        entries.append((f"tmua_2016_q{q}", rel_pdf_2016, (q - 1) // 2 + 2))
+
+    # ── TMUA 2017-2023: 1 question per page, Q1 at index 2 ──────────────────
+    for year in range(2017, 2024):
         rel_pdf = f"papers/tmua/TMUA-{year}-paper-1.pdf"
         for q in range(1, 21):
-            entries.append((f"tmua_{year}_q{q}", rel_pdf, q - 1))
+            entries.append((f"tmua_{year}_q{q}", rel_pdf, q + 1))
 
-    # ── TMUA specimen ────────────────────────────────────────────────────────
+    # ── TMUA specimen: 2 questions per page, Q1+Q2 share index 2 ────────────
     for q in range(1, 21):
         entries.append((
             f"tmua_specimen_q{q}",
             "papers/tmua/TMUA-early-specimen-paper-1.pdf",
-            q - 1,
+            (q - 1) // 2 + 2,
         ))
 
     return entries
@@ -162,12 +169,12 @@ def extract_page(pdf_path: Path, page_idx: int, out_path: Path) -> bool:
 def remove_stale_images():
     """Delete existing NSAA, ENGAA, and PAT images so they are re-extracted correctly."""
     removed = 0
-    for pattern in ("nsaa_*.png", "engaa_*.png", "pat_*.png"):
+    for pattern in ("nsaa_*.png", "engaa_*.png", "pat_*.png", "tmua_*.png"):
         for f in IMAGES_DIR.glob(pattern):
             f.unlink()
             removed += 1
     if removed:
-        print(f"Removed {removed} stale NSAA/ENGAA/PAT images (will re-extract).\n")
+        print(f"Removed {removed} stale NSAA/ENGAA/PAT/TMUA images (will re-extract).\n")
 
 
 def main():

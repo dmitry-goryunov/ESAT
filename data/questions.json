@@ -4356,6 +4356,33 @@
     "technique": "**TMUA 2016 — paper techniques:**\n- Generate first few terms for sequence questions.\n- Use graph intersections to count solutions — do not solve high-degree equations.\n- Use stationary points or graph shape rather than algebra.\n- Use substitution (x = 0, 1, −1) for algebraic identities.\n- Geometry: draw a clean diagram and introduce one variable.\n\n**Topic (algebra) — always apply:**\n- Substitute answer options for awkward rearrangements.\n- Test simple values (x = 0, 1, −1) to eliminate symbolic options.\n- Factor before expanding.\n- For inequalities: solve normally, then check one test value.\n- For roots of quadratics: use sum/product or discriminant before the full formula."
   },
   {
+    "id": "tmua_2016_q17",
+    "source": "TMUA 2016",
+    "module": "maths",
+    "topic": "graphs",
+    "image": "data/images/tmua_2016_q17.png",
+    "answer": "D",
+    "technique": "**TMUA 2016 — paper techniques:**\n- Generate first few terms for sequence questions.\n- Use graph intersections to count solutions — do not solve high-degree equations.\n- Use stationary points or graph shape rather than algebra.\n- Use substitution (x = 0, 1, −1) for algebraic identities.\n- Geometry: draw a clean diagram and introduce one variable.\n\n**Topic (graphs) — always apply:**\n- Identify whether the question needs gradient, area, intercept or asymptote.\n- Velocity-time: area = displacement; gradient = acceleration.\n- Distance-time: gradient = speed.\n- Momentum-time: gradient = resultant force.\n- Force-distance: area = work done."
+  },
+  {
+    "id": "tmua_2016_q18",
+    "source": "TMUA 2016",
+    "module": "maths",
+    "topic": "graphs",
+    "image": "data/images/tmua_2016_q18.png",
+    "answer": "A",
+    "technique": "**TMUA 2016 — paper techniques:**\n- Generate first few terms for sequence questions.\n- Use graph intersections to count solutions — do not solve high-degree equations.\n- Use stationary points or graph shape rather than algebra.\n- Use substitution (x = 0, 1, −1) for algebraic identities.\n- Geometry: draw a clean diagram and introduce one variable.\n\n**Topic (graphs) — always apply:**\n- Identify whether the question needs gradient, area, intercept or asymptote.\n- Velocity-time: area = displacement; gradient = acceleration.\n- Distance-time: gradient = speed.\n- Momentum-time: gradient = resultant force.\n- Force-distance: area = work done."
+  },
+  {
+    "id": "tmua_2016_q19",
+    "source": "TMUA 2016",
+    "module": "maths",
+    "topic": "sequences",
+    "image": "data/images/tmua_2016_q19.png",
+    "answer": "B",
+    "technique": "**TMUA 2016 — paper techniques:**\n- Generate first few terms for sequence questions.\n- Use graph intersections to count solutions — do not solve high-degree equations.\n- Use stationary points or graph shape rather than algebra.\n- Use substitution (x = 0, 1, −1) for algebraic identities.\n- Geometry: draw a clean diagram and introduce one variable.\n\n**Topic (sequences) — always apply:**\n- Write the first few terms and look for telescoping or a pattern.\n- Use the general term and set exponent equal to the target.\n- Sum = n/2 × (first + last) for arithmetic sequences.\n- For recurrence relations: generate terms, do not guess."
+  },
+  {
     "id": "tmua_2016_q2",
     "source": "TMUA 2016",
     "module": "maths",
@@ -4363,6 +4390,15 @@
     "image": "data/images/tmua_2016_q2.png",
     "answer": "E",
     "technique": "**TMUA 2016 — paper techniques:**\n- Generate first few terms for sequence questions.\n- Use graph intersections to count solutions — do not solve high-degree equations.\n- Use stationary points or graph shape rather than algebra.\n- Use substitution (x = 0, 1, −1) for algebraic identities.\n- Geometry: draw a clean diagram and introduce one variable.\n\n**Topic (functions) — always apply:**\n- Track minimum point and intercepts through any transformation.\n- Use discriminant for tangency or no intersection (b² − 4ac = 0 for tangent).\n- Graph first when counting solutions — sketch both sides and count crossings.\n- For transformations: apply operations in order, track one key point."
+  },
+  {
+    "id": "tmua_2016_q20",
+    "source": "TMUA 2016",
+    "module": "maths",
+    "topic": "probability",
+    "image": "data/images/tmua_2016_q20.png",
+    "answer": "",
+    "technique": "**TMUA 2016 — paper techniques:**\n- Generate first few terms for sequence questions.\n- Use graph intersections to count solutions — do not solve high-degree equations.\n- Use stationary points or graph shape rather than algebra.\n- Use substitution (x = 0, 1, −1) for algebraic identities.\n- Geometry: draw a clean diagram and introduce one variable.\n\n**Topic (probability) — always apply:**\n- Use complement for 'at least one'.\n- Use a two-way table for category or gender/activity questions.\n- For without-replacement: reduce numerator and denominator after each draw.\n- Count ordered outcomes when dice or repeated draws are involved.\n- For two-stage problems: condition on the first draw."
   },
   {
     "id": "tmua_2016_q3",
@@ -5760,6 +5796,33 @@
     "technique": "**TMUA Specimen — paper techniques:**\n- Substitute before expanding (x = 0, 1, −1, 2; or θ = 0°, 30°, 45°, 60°, 90°).\n- Number of solutions: sketch both sides and count intersections.\n- Sequences: write first terms and identify the pattern.\n- Quadratic conditions: discriminant (< 0, = 0, > 0).\n- Binomial: target the requested term only.\n\n**Topic (algebra) — always apply:**\n- Substitute answer options for awkward rearrangements.\n- Test simple values (x = 0, 1, −1) to eliminate symbolic options.\n- Factor before expanding.\n- For inequalities: solve normally, then check one test value.\n- For roots of quadratics: use sum/product or discriminant before the full formula."
   },
   {
+    "id": "tmua_specimen_q17",
+    "source": "TMUA Specimen",
+    "module": "maths",
+    "topic": "graphs",
+    "image": "data/images/tmua_specimen_q17.png",
+    "answer": "D",
+    "technique": "**TMUA Specimen — paper techniques:**\n- Substitute before expanding (x = 0, 1, −1, 2; or θ = 0°, 30°, 45°, 60°, 90°).\n- Number of solutions: sketch both sides and count intersections.\n- Sequences: write first terms and identify the pattern.\n- Quadratic conditions: discriminant (< 0, = 0, > 0).\n- Binomial: target the requested term only.\n\n**Topic (graphs) — always apply:**\n- Identify whether the question needs gradient, area, intercept or asymptote.\n- Velocity-time: area = displacement; gradient = acceleration.\n- Distance-time: gradient = speed.\n- Momentum-time: gradient = resultant force.\n- Force-distance: area = work done."
+  },
+  {
+    "id": "tmua_specimen_q18",
+    "source": "TMUA Specimen",
+    "module": "maths",
+    "topic": "graphs",
+    "image": "data/images/tmua_specimen_q18.png",
+    "answer": "B",
+    "technique": "**TMUA Specimen — paper techniques:**\n- Substitute before expanding (x = 0, 1, −1, 2; or θ = 0°, 30°, 45°, 60°, 90°).\n- Number of solutions: sketch both sides and count intersections.\n- Sequences: write first terms and identify the pattern.\n- Quadratic conditions: discriminant (< 0, = 0, > 0).\n- Binomial: target the requested term only.\n\n**Topic (graphs) — always apply:**\n- Identify whether the question needs gradient, area, intercept or asymptote.\n- Velocity-time: area = displacement; gradient = acceleration.\n- Distance-time: gradient = speed.\n- Momentum-time: gradient = resultant force.\n- Force-distance: area = work done."
+  },
+  {
+    "id": "tmua_specimen_q19",
+    "source": "TMUA Specimen",
+    "module": "maths",
+    "topic": "sequences",
+    "image": "data/images/tmua_specimen_q19.png",
+    "answer": "D",
+    "technique": "**TMUA Specimen — paper techniques:**\n- Substitute before expanding (x = 0, 1, −1, 2; or θ = 0°, 30°, 45°, 60°, 90°).\n- Number of solutions: sketch both sides and count intersections.\n- Sequences: write first terms and identify the pattern.\n- Quadratic conditions: discriminant (< 0, = 0, > 0).\n- Binomial: target the requested term only.\n\n**Topic (sequences) — always apply:**\n- Write the first few terms and look for telescoping or a pattern.\n- Use the general term and set exponent equal to the target.\n- Sum = n/2 × (first + last) for arithmetic sequences.\n- For recurrence relations: generate terms, do not guess."
+  },
+  {
     "id": "tmua_specimen_q2",
     "source": "TMUA Specimen",
     "module": "maths",
@@ -5767,6 +5830,15 @@
     "image": "data/images/tmua_specimen_q2.png",
     "answer": "D",
     "technique": "**TMUA Specimen — paper techniques:**\n- Substitute before expanding (x = 0, 1, −1, 2; or θ = 0°, 30°, 45°, 60°, 90°).\n- Number of solutions: sketch both sides and count intersections.\n- Sequences: write first terms and identify the pattern.\n- Quadratic conditions: discriminant (< 0, = 0, > 0).\n- Binomial: target the requested term only.\n\n**Topic (functions) — always apply:**\n- Track minimum point and intercepts through any transformation.\n- Use discriminant for tangency or no intersection (b² − 4ac = 0 for tangent).\n- Graph first when counting solutions — sketch both sides and count crossings.\n- For transformations: apply operations in order, track one key point."
+  },
+  {
+    "id": "tmua_specimen_q20",
+    "source": "TMUA Specimen",
+    "module": "maths",
+    "topic": "probability",
+    "image": "data/images/tmua_specimen_q20.png",
+    "answer": "G",
+    "technique": "**TMUA Specimen — paper techniques:**\n- Substitute before expanding (x = 0, 1, −1, 2; or θ = 0°, 30°, 45°, 60°, 90°).\n- Number of solutions: sketch both sides and count intersections.\n- Sequences: write first terms and identify the pattern.\n- Quadratic conditions: discriminant (< 0, = 0, > 0).\n- Binomial: target the requested term only.\n\n**Topic (probability) — always apply:**\n- Use complement for 'at least one'.\n- Use a two-way table for category or gender/activity questions.\n- For without-replacement: reduce numerator and denominator after each draw.\n- Count ordered outcomes when dice or repeated draws are involved.\n- For two-stage problems: condition on the first draw."
   },
   {
     "id": "tmua_specimen_q3",
